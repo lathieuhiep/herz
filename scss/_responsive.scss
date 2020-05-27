@@ -1,7 +1,7 @@
 @media ( min-width: 1200px ) {
 
   .container {
-    max-width: 1200px;
+    max-width: 1170px;
   }
 
 }
@@ -84,6 +84,23 @@
         display: inline-flex;
         height: 100%;
         @include align-items(center);
+
+        &.menu-item-has-children {
+          > a {
+            position: relative;
+            padding-right: 20px;
+
+            &:after {
+              position: absolute;
+              content: "\f078";
+              font-family: "Font Awesome 5 Free";
+              font-weight: 900;
+              right: 0;
+              top: 50%;
+              @include transform(translateY(-50%));
+            }
+          }
+        }
       }
     }
     ul {

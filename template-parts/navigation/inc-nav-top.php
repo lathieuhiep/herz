@@ -8,8 +8,8 @@ $herz_nav_top_sticky   =   $herz_options['herz_nav_top_sticky'];
 <nav id="site-navigation" class="main-navigation<?php echo esc_attr( $herz_nav_top_sticky == 1 ? ' active-sticky-nav' : '' ); ?>">
     <div class="site-navbar navbar-expand-lg">
         <div class="container">
-            <div class="site-navigation_warp d-flex justify-content-lg-end">
-                <div class="site-logo d-flex align-items-center">
+            <div class="site-navigation_warp">
+                <div class="site-logo">
                     <a href="<?php echo esc_url( get_home_url( '/' ) ); ?>" title="<?php bloginfo( 'name' ); ?>">
                         <?php
                             if ( !empty( $herz_logo_image_id ) ) :
@@ -25,8 +25,7 @@ $herz_nav_top_sticky   =   $herz_options['herz_nav_top_sticky'];
                     </button>
                 </div>
 
-                <div class="site-menu collapse navbar-collapse d-lg-flex justify-content-lg-end">
-
+                <div class="site-menu collapse navbar-collapse">
                     <?php
 
                     if ( has_nav_menu('primary') ) :

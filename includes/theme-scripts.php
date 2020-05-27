@@ -61,7 +61,7 @@ function herz_register_front_end() {
 	/*
 	* Start Get Css Front End
 	* */
-	wp_enqueue_style( 'herz-fonts', herz_fonts_url(), array(), null );
+//	wp_enqueue_style( 'herz-fonts', herz_fonts_url(), array(), null );
 
 	/* Start main Css */
 	wp_enqueue_style( 'herz-library', get_theme_file_uri( '/css/library/minify/library.min.css' ), array(), '' );
