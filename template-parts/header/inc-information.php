@@ -12,12 +12,14 @@ $herz_information_phone     =   $herz_options['herz_information_phone'];
 ?>
 
 <div class="information">
-    <div class="container-fluid d-lg-flex justify-content-lg-end">
+    <div class="container-fluid d-lg-flex align-items-center justify-content-lg-end">
         <div class="text">
-            <span>Follow Doppelherz tại...</span>
+            <span>
+                <?php esc_html_e( 'Follow Doppelherz tại...', 'herz' ); ?>
+            </span>
         </div>
 
-        <div class="information__social-network social-network-toTopFromBottom">
+        <div class="information__social-network d-flex align-items-center">
             <?php herz_get_social_url(); ?>
         </div>
 

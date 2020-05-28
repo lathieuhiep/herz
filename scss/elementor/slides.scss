@@ -35,17 +35,19 @@
       position: absolute;
       width: 100%;
       left: 0;
-      bottom: 15px;
+      bottom: 20px;
       margin: 0;
 
       .owl-dot {
         span {
-          background-color: #ffffff;
+          width: 14px;
+          height: 14px;
+          background-color: #cecece;
         }
         &.active,
         &:hover {
           span {
-            background-color: $background-hover;
+            background-color: #d95656;
           }
         }
       }

@@ -32,7 +32,7 @@ class herz_widget_about_text extends Widget_Base {
         );
 
         $this->add_control(
-            'widget_title',
+            'title',
             [
                 'label'         =>  esc_html__( 'Title', 'herz' ),
                 'type'          =>  Controls_Manager::TEXT,
@@ -175,7 +175,7 @@ class herz_widget_about_text extends Widget_Base {
 
         <div class="element-about-text">
             <h2 class="element-about-text__title">
-                <?php echo wp_kses_post( $settings['widget_title'] ); ?>
+                <?php echo wp_kses_post( $settings['title'] ); ?>
             </h2>
 
             <div class="icon">
@@ -210,7 +210,7 @@ class herz_widget_about_text extends Widget_Base {
 
         <div class="element-about-text">
             <h2 class="element-about-text__title">
-                {{{ settings.widget_title }}}
+                {{{ settings.title }}}
             </h2>
 
             <div class="icon">

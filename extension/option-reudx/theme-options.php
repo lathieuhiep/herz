@@ -466,23 +466,16 @@ Redux::setSection( $herz_opt_name, array(
         ),
 
         array(
-            'id'        =>  'herz_social_network_youtube',
-            'type'      =>  'text',
-            'title'     =>  esc_html__( 'Youtube', 'herz' ),
-            'default'   =>  '#',
-        ),
-
-        array(
-            'id'        =>  'herz_social_network_twitter',
-            'type'      =>  'text',
-            'title'     =>  esc_html__( 'Twitter', 'herz' ),
-            'default'   =>  '#',
-        ),
-
-        array(
             'id'        =>  'herz_social_network_instagram',
             'type'      =>  'text',
             'title'     =>  esc_html__( 'Instagram', 'herz' ),
+            'default'   =>  '#',
+        ),
+
+        array(
+            'id'        =>  'herz_social_network_youtube',
+            'type'      =>  'text',
+            'title'     =>  esc_html__( 'Youtube', 'herz' ),
             'default'   =>  '#',
         ),
 

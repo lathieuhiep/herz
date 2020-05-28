@@ -248,8 +248,8 @@ function herz_get_social_url() {
 ?>
 
         <div class="social-network-item item-<?php echo esc_attr( $herz_social['id'] ); ?>">
-            <a href="<?php echo esc_url( $herz_social_url ); ?>">
-                <i class="<?php echo esc_attr( $herz_social['icon'] ); ?>" aria-hidden="true"></i>
+            <a href="<?php echo esc_url( $herz_social_url ); ?>" target="_blank" title="<?php echo esc_attr( $herz_social['id'] ); ?>">
+                <img src="<?php echo esc_url( get_theme_file_uri( $herz_social['icon'] ) ); ?>" alt="<?php echo esc_attr( $herz_social['id'] ); ?>">
             </a>
         </div>
 
@@ -263,10 +263,9 @@ function herz_get_social_url() {
 function herz_get_social_network() {
     return array(
 
-        array( 'id' =>  'facebook', 'icon'  =>  'fab fa-facebook-f'),
-        array( 'id' =>  'youtube', 'icon'   =>  'fab fa-youtube'),
-        array( 'id' =>  'twitter', 'icon'   =>  'fab fa-twitter'),
-        array( 'id' =>  'instagram', 'icon' =>  'fab fa-instagram'),
+        array( 'id' =>  'facebook', 'icon'  =>  '/images/icon/icon-facebook.png'),
+        array( 'id' =>  'instagram', 'icon' =>  '/images/icon/icon-instagram.png'),
+        array( 'id' =>  'youtube', 'icon'   =>  '/images/icon/icon-youtube.png'),
 
     );
 }
