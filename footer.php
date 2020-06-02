@@ -7,7 +7,7 @@
 
     get_template_part( 'template-parts/footer/inc','multi-column' );
 
-    get_template_part( 'template-parts/footer/inc','copyright' );
+//    get_template_part( 'template-parts/footer/inc','copyright' );
 
     ?>
 

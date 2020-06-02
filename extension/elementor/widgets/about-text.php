@@ -32,133 +32,82 @@ class herz_widget_about_text extends Widget_Base {
         );
 
         $this->add_control(
-            'title',
+            'heading',
             [
-                'label'         =>  esc_html__( 'Title', 'herz' ),
+                'label'         =>  esc_html__( 'Heading', 'herz' ),
                 'type'          =>  Controls_Manager::TEXT,
-                'default'       =>  esc_html__( 'Title About Text', 'herz' ),
+                'default'       =>  esc_html__( 'Heading', 'herz' ),
                 'label_block'   =>  true
             ]
         );
 
-        $this->add_control(
-            'icon',
+        $repeater = new Repeater();
+
+        $repeater->add_control(
+            'list_image',
             [
-                'label'     =>  esc_html__( 'Icon', 'herz' ),
-                'type'      =>  Controls_Manager::ICON,
-                'default'   =>  [
-                    'value'     =>  'fas fa-star',
-                    'library'   =>  'solid',
+                'label' => esc_html__( 'Choose Image', 'herz' ),
+                'type' => Controls_Manager::MEDIA,
+                'default' => [
+                    'url' => Utils::get_placeholder_image_src(),
                 ],
+            ]
+        );
+
+        $repeater->add_control(
+            'list_title', [
+                'label' => esc_html__( 'Title', 'herz' ),
+                'type' => Controls_Manager::TEXT,
+                'default' => esc_html__( 'List Title' , 'herz' ),
+                'label_block' => true,
+            ]
+        );
+
+        $repeater->add_control(
+            'list_description',
+            [
+                'label' => esc_html__( 'Description', 'herz' ),
+                'type' => Controls_Manager::TEXTAREA,
+                'rows' => 10,
+                'default' => esc_html__( 'Default description', 'herz' ),
+                'placeholder' => esc_html__( 'Type your description here', 'herz' ),
+            ]
+        );
+
+        $this->add_control(
+            'list',
+            [
+                'label' => esc_html__( 'List', 'herz' ),
+                'type' => Controls_Manager::REPEATER,
+                'fields' => $repeater->get_controls(),
+                'default' => [
+                    [
+                        'list_title' => __( 'Title #1', 'herz' ),
+                    ],
+                    [
+                        'list_title' => __( 'Title #2', 'herz' ),
+                    ],
+                ],
+                'title_field' => '{{{ list_title }}}',
             ]
         );
 
         $this->end_controls_section();
 
         $this->start_controls_section(
-            'section_text_editor',
+            'section_image_features',
             [
-                'label' => esc_html__( 'Text Editor', 'herz' ),
+                'label' => esc_html__( 'Image Features', 'herz' ),
             ]
         );
 
         $this->add_control(
-            'widget_description',
+            'image_features',
             [
-                'label'     =>  esc_html__( 'Description', 'herz' ),
-                'type'      =>  Controls_Manager::WYSIWYG,
-                'default'   =>  esc_html__( 'Default description', 'herz' ),
-            ]
-        );
-
-        $this->end_controls_section();
-
-        /*STYLE TAB*/
-        $this->start_controls_section('style', array(
-            'label' =>  esc_html__( 'Text', 'herz' ),
-            'tab'   =>  Controls_Manager::TAB_STYLE,
-        ));
-
-        $this->add_control(
-            'align',
-            [
-                'label'     =>  esc_html__( 'Alignment Title', 'herz' ),
-                'type'      =>  Controls_Manager::CHOOSE,
-                'options'   =>  [
-                    'left'  =>  [
-                        'title' =>  esc_html__( 'Left', 'herz' ),
-                        'icon'  =>  'fa fa-align-left',
-                    ],
-
-                    'center'    =>  [
-                        'title' =>  esc_html__( 'Center', 'herz' ),
-                        'icon'  =>  'fa fa-align-center',
-                    ],
-                    'right' => [
-                        'title' =>  esc_html__( 'Right', 'herz' ),
-                        'icon'  =>  'fa fa-align-right',
-                    ],
-                ],
-                'selectors' => [
-                    '{{WRAPPER}} .element-about-text' => 'text-align: {{VALUE}};',
-                ],
-            ]
-        );
-
-        $this->add_control(
-            'title_color',
-            [
-                'label'     =>  __( 'Title Color', 'herz' ),
-                'type'      =>  Controls_Manager::COLOR,
-                'selectors' =>  [
-                    '{{WRAPPER}} .element-about-text__title' => 'color: {{VALUE}}',
-                ],
-            ]
-        );
-
-        $this->add_control(
-            'text_editor_color',
-            [
-                'label'     =>  __( 'Text Editor Color', 'herz' ),
-                'type'      =>  Controls_Manager::COLOR,
-                'selectors' =>  [
-                    '{{WRAPPER}} .element-about-text__description' => 'color: {{VALUE}}',
-                ],
-            ]
-        );
-
-        $this->add_control(
-            'hide_line',
-            [
-                'label'     =>  esc_html__( 'Hide Line', 'herz' ),
-                'type'      =>  Controls_Manager::SELECT,
-                'default'   =>  'no',
-                'options'   =>  [
-                    'no'    =>  esc_html__( 'No', 'herz' ),
-                    'yes'   =>  esc_html__( 'Yes', 'herz' ),
-                ],
-            ]
-        );
-
-        $this->add_responsive_control(
-            'margin_bottom_line',
-            [
-                'label'     =>  esc_html__( 'Margin Bottom Line', 'herz' ),
-                'type'      =>  Controls_Manager::SLIDER,
-                'default'   =>  [
-                    'size'  =>  '',
-                ],
-                'range'     =>  [
-                    'px'    =>  [
-                        'min'   =>  10,
-                        'max'   =>  600,
-                    ],
-                ],
-                'selectors' =>  [
-                    '{{WRAPPER}} .element-about-text__line' => 'margin-bottom: {{SIZE}}{{UNIT}};',
-                ],
-                'condition'     =>  [
-                    'hide_line' =>  'no',
+                'label' => esc_html__( 'Choose Image', 'herz' ),
+                'type' => Controls_Manager::MEDIA,
+                'default' => [
+                    'url' => Utils::get_placeholder_image_src(),
                 ],
             ]
         );
@@ -169,70 +118,50 @@ class herz_widget_about_text extends Widget_Base {
 
     protected function render() {
 
-        $settings       =   $this->get_settings_for_display();
+        $settings = $this->get_settings_for_display();
 
-        ?>
-
+    ?>
         <div class="element-about-text">
-            <h2 class="element-about-text__title">
-                <?php echo wp_kses_post( $settings['title'] ); ?>
-            </h2>
+            <div class="row align-items-end">
+                <div class="col-md-6">
+                    <h3 class="heading">
+                        <?php echo wp_kses_post( $settings['heading'] ); ?>
+                    </h3>
 
-            <div class="icon">
-                <?php Icons_Manager::render_icon( $settings['icon'], [ 'aria-hidden' => 'true' ] ); ?>
-            </div>
+                    <div class="row">
+                        <?php foreach ( $settings['list'] as $item ) : ?>
 
-            <?php if ( $settings['hide_line'] == 'no' ) : ?>
+                        <div class="col-md-6 item-col d-flex flex-column">
+                            <div class="item">
+                                <div class="item-img">
+                                    <?php echo wp_get_attachment_image( $item['list_image']['id'], 'full' ); ?>
+                                </div>
 
-                <span class="element-about-text__line">&nbsp;</span>
+                                <div class="content">
+                                    <h4 class="item-title">
+                                        <?php echo wp_kses_post( $item['list_title'] ); ?>
+                                    </h4>
 
-            <?php endif; ?>
+                                    <p class="item-desc">
+                                        <?php echo wp_kses_post( $item['list_description'] ) ?>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
 
-            <?php if ( !empty( $settings['widget_description'] ) ) : ?>
-
-                <div class="element-about-text__description">
-                    <?php echo wp_kses_post( $settings['widget_description'] ); ?>
+                        <?php endforeach; ?>
+                    </div>
                 </div>
 
-            <?php endif; ?>
-        </div>
-
-        <?php
-
-    }
-
-    protected function _content_template() {
-
-        ?>
-        <#
-        var iconHTML = elementor.helpers.renderIcon( view, settings.selected_icon, { 'aria-hidden': true }, 'i' , 'object' );
-        #>
-
-        <div class="element-about-text">
-            <h2 class="element-about-text__title">
-                {{{ settings.title }}}
-            </h2>
-
-            <div class="icon">
-                {{{ iconHTML.value }}}
+                <div class="col-md-6">
+                    <div class="img-features">
+                        <?php echo wp_get_attachment_image( $settings['image_features']['id'], 'full' ); ?>
+                    </div>
+                </div>
             </div>
-
-            <# if ( settings.hide_line == 0 ) {#>
-
-            <span class="element-about-text__line">&nbsp;</span>
-
-            <# } #>
-
-            <# if ( '' !== settings.widget_description ) {#>
-
-            <div class="element-about-text__description">
-                {{{ settings.widget_description }}}
-            </div>
-
-            <# } #>
         </div>
+    <?php
 
-        <?php
     }
 
 }

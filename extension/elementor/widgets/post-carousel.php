@@ -4,8 +4,6 @@ namespace Elementor;
 
 if ( ! defined( 'ABSPATH' ) ) exit;
 
-use Elementor\Core\Schemes;
-
 class herz_widget_post_carousel extends Widget_Base {
 
     public function get_categories() {
@@ -35,6 +33,15 @@ class herz_widget_post_carousel extends Widget_Base {
             'section_query',
             [
                 'label' =>  esc_html__( 'Query', 'herz' )
+            ]
+        );
+
+        $this->add_control(
+            'heading', [
+                'label' => esc_html__( 'Heading', 'herz' ),
+                'type' => Controls_Manager::TEXT,
+                'default' => esc_html__( 'Heading' , 'herz' ),
+                'label_block' => true,
             ]
         );
 
@@ -531,6 +538,10 @@ class herz_widget_post_carousel extends Widget_Base {
     ?>
 
             <div class="element-post-carousel">
+                <h3 class="heading heading-product">
+                    <?php echo wp_kses_post( $settings['heading'] ); ?>
+                </h3>
+
                 <div class="custom-owl-carousel custom-equal-height-owl owl-carousel owl-theme" data-settings-owl='<?php echo wp_json_encode( $data_settings_owl ) ; ?>'>
                     <?php while ( $query->have_posts() ): $query->the_post(); ?>
 
@@ -574,6 +585,13 @@ class herz_widget_post_carousel extends Widget_Base {
                                     </div>
 
                                 <?php endif; ?>
+
+                                <div class="link-post text-right">
+                                    <a href="<?php the_permalink(); ?>">
+                                        <span><?php esc_html_e( 'Xem thêm', 'herz' ); ?></span>
+                                        <i class="fas fa-angle-double-right"></i>
+                                    </a>
+                                </div>
                             </div>
                         </div>
 

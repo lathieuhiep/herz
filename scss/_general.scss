@@ -50,9 +50,9 @@ html {
 }
 body {
   min-height: 100vh;
-  line-height: 1.8em;
+  line-height: 1.3em;
   overflow-x: hidden;
-  font-size: 14px;
+  font-size: 17px;
   color: $color-primary;
   font-family: $font-family-text;
   font-weight: $font-weight-regular;
@@ -99,7 +99,7 @@ a {
   }
 }
 p {
-  margin: 0 0 15px;
+  margin: 0 0 30px;
 
   &:last-child {
     margin-bottom: 0;
@@ -311,6 +311,10 @@ pre {
     .owl-item {
       @include flexbox();
       @include flex(1 0 auto);
+
+      .item {
+        @include flex(1);
+      }
     }
   }
 }

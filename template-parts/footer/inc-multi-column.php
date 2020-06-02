@@ -33,10 +33,8 @@ if( is_active_sidebar( 'herz-sidebar-footer-multi-column-1' ) || is_active_sideb
                     if( is_active_sidebar( 'herz-sidebar-footer-multi-column-'.$j ) ):
                 ?>
 
-                    <div class="col-12 col-sm-6 col-md-4 col-lg-<?php echo esc_attr( $herz_col ); ?>">
-
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-<?php echo esc_attr( $herz_col ); ?> item-col">
                         <?php dynamic_sidebar( 'herz-sidebar-footer-multi-column-'.$j ); ?>
-
                     </div>
 
                 <?php

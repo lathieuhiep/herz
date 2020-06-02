@@ -17,6 +17,9 @@
         /* Element post carousel */
         elementorFrontend.hooks.addAction( 'frontend/element_ready/herz-post-carousel.default', ElementCarouselSlider );
 
+        /* Element product carousel */
+        elementorFrontend.hooks.addAction( 'frontend/element_ready/herz-product-carousel.default', ElementCarouselSlider );
+
     } );
 
 })( jQuery );

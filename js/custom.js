@@ -98,7 +98,7 @@
                         navSpeed: 800,
                         dotsSpeed: 800,
                         autoHeight: false,
-                        navText: ['<i class="fa fa-angle-left" aria-hidden="true"></i>','<i class="fa fa-angle-right" aria-hidden="true"></i>'],
+                        navText: ['<i class="fas fa-chevron-left" aria-hidden="true"></i>','<i class="fas fa-chevron-right" aria-hidden="true"></i>'],
                     };
 
                     let config = $.extend( defaults, slider.data( 'settings-owl') );

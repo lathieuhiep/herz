@@ -1,19 +1,57 @@
 .element-post-carousel {
+  .heading {
+    &.heading-product {
+      padding-left: 0;
+      margin-bottom: 32px;
+      font-size: 40px;
+      color: $color-primary;
+    }
+  }
   .item-post {
     @include flexbox();
     @include flex-direction(column);
     @include flex(1);
+    @include transition(all 0.4s ease-in-out);
 
     .item-post_content {
-      padding: 15px;
-      border: 1px solid $border-color;
+      padding: 20px 15px;
+      background-color: #ffffff;
       @include flexbox();
       @include flex-direction(column);
       @include flex(1);
 
       .item-post__title {
-        @include flex(1);
+        font-size: 21px;
+        margin-bottom: 7px;
+
+        a {
+          color: $color-title-second;
+        }
       }
+    }
+    .item-post__desc {
+      font-size: 15px;
+      line-height: 1.2em;
+      margin-bottom: 1px;
+    }
+    .link-post {
+      a {
+        display: inline-block;
+        font-family: LatoHeavy;
+        font-size: 15px;
+        color: #e22225;
+
+        i {
+          @include transform(translateY(1px));
+        }
+        &:hover {
+          color: $color-hover;
+        }
+      }
+    }
+    &:hover {
+      border: 1px solid #e2e2e2;
+      @include box-shadow(1px 0 6px 0 rgba(59, 59, 59, 0.2));
     }
   }
 }

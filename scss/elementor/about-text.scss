@@ -1,0 +1,39 @@
+.heading {
+  font-size: 27px;
+  color: $color-title-second;
+  margin-bottom: 25px;
+  padding-left: 22px;
+}
+.element-about-text {
+  .item-col {
+    margin-bottom: 30px;
+  }
+  .item {
+    text-align: center;
+    @include flexbox();
+    @include flex-direction(column);
+
+    .item-img {
+      min-height: 192px;
+      margin-bottom: 23px;
+      @include flexbox();
+      @include align-items(flex-end);
+      @include justify-content(center);
+
+      img {
+        display: inline-block;
+      }
+    }
+    .content {
+
+    }
+    .item-title {
+      font-size: 17px;
+      margin: 0;
+    }
+    .item-desc {
+      font-size: 17px;
+      margin-top: 10px;
+    }
+  }
+}
