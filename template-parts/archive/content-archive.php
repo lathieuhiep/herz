@@ -5,22 +5,40 @@ global $herz_options;
 $herz_blog_sidebar_archive    =   !empty( $herz_options['herz_blog_sidebar_archive'] ) ? $herz_options['herz_blog_sidebar_archive'] : 'right';
 $herz_class_col_content       =   herz_col_use_sidebar( $herz_blog_sidebar_archive, 'herz-sidebar-main' );
 $herz_blog_per_row            =   $herz_options['herz_blog_per_row'];
+$herz_taxonomy = get_queried_object();
 
 ?>
 
 <div class="site-container site-blog">
+    <?php if ( function_exists('z_taxonomy_image') ) : ?>
+
+    <div class="cate-image">
+        <?php z_taxonomy_image(); ?>
+    </div>
+
+    <?php endif; ?>
+
     <div class="container">
         <div class="row">
             <div class="<?php echo esc_attr( $herz_class_col_content ); ?>">
-                <div class="site-post-content">
+                <div class="site-post-content site-custom-content">
+                    <?php if( is_category() ) : ?>
 
-                    <?php if ( have_posts() ) : ?>
+                    <h2 class="title-cate">
+                        <?php echo esc_html( $herz_taxonomy->name ); ?>
+                    </h2>
+
+                    <?php
+                    endif;
+
+                    if ( have_posts() ) :
+                    ?>
 
                         <div class="row">
 
                             <?php while ( have_posts() ) : the_post(); ?>
 
-                                <div id="post-<?php the_ID(); ?>" class="site-post-item col-12 col-md-6 col-lg-<?php echo esc_attr( 12 / $herz_blog_per_row ); ?>">
+                                <div id="post-<?php the_ID(); ?>" class="item-col d-flex flex-column col-12 col-md-6 col-lg-<?php echo esc_attr( 12 / $herz_blog_per_row ); ?>">
                                     <?php
                                         if ( ! is_search() ):
                                             get_template_part( 'template-parts/archive/content', 'archive-info' );

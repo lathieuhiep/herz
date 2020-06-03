@@ -277,8 +277,8 @@ function herz_pagination() {
     the_posts_pagination( array(
         'type'                  =>  'list',
         'mid_size'              =>  2,
-        'prev_text'             =>  esc_html__( 'Previous', 'herz' ),
-        'next_text'             =>  esc_html__( 'Next', 'herz' ),
+        'prev_text'             =>  '<i class="fas fa-angle-left"></i>',
+        'next_text'             =>  '<i class="fas fa-angle-right"></i>',
         'screen_reader_text'    =>  '&nbsp;',
     ) );
 

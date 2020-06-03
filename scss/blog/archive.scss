@@ -1,7 +1,36 @@
+.site-blog {
+  &.site-container {
+    padding-top: 0;
+  }
+  .site-post-content {
+    padding-top: 72px;
+
+    .row {
+      margin-left: -8px;
+      margin-right: -8px;
+    }
+    .item-col {
+      margin-bottom: 22px;
+      padding-left: 8px;
+      padding-right: 8px;
+    }
+  }
+  .title-cate {
+    font-size: 17px;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-family: "Lato", sans-serif;
+    margin-bottom: 52px;
+  }
+}
 .site-post-item {
-  margin-bottom: 30px;
+  background-color: #fbf4ed;
+  overflow: hidden;
+  @include border-radius(5px);
   @include flexbox();
   @include flex-direction(column);
+  @include flex(1);
+  @include transition(all 0.4s ease-in-out);
 
   .site-post-content {
     padding: 25px 15px 15px;
@@ -9,22 +38,36 @@
     @include flex(1 auto);
   }
   .site-post-image {
-    margin-bottom: 10px;
+    height: 240px;
+
+    img {
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  .item-content {
+    padding: 18px 15px 20px;
+    @include flexbox();
+    @include flex-direction(column);
+    @include flex(1);
+  }
+  &:hover {
+    @include box-shadow(1px 0 6px 0 rgba(59, 59, 59, 0.2));
   }
 }
 .site-post-title {
   margin-bottom: 10px;
-  font-size: 24px;
+  font-size: 21px;
 
   a {
-    color: $color-title;
+    display: inline-block;
+    color: $color-title-second;
 
     i {
       margin-right: 5px;
-      color: $color-hover;
     }
     &:hover {
-      color: $color-hover;
+      color: $color-title;
     }
   }
 }
@@ -57,6 +100,11 @@
   }
 }
 .site-post-excerpt {
+  font-size: 15px;
+  line-height: 1.16em;
+  margin-bottom: 10px;
+  @include flex(1);
+
   ul {
     li {
       margin-bottom: 10px;
@@ -95,6 +143,22 @@
     span {
       display: inline-block;
       padding: 0 5px;
+    }
+  }
+}
+.link-post {
+  a {
+    color: $color-hover;
+    font-size: 15px;
+    font-family: LatoHeavy;
+
+    i {
+      position: relative;
+      top: 1px;
+      font-size: 14px;
+    }
+    &:hover {
+      color: $color-title;
     }
   }
 }
