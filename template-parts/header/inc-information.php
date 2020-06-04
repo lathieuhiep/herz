@@ -1,63 +1,68 @@
 <?php
 global $herz_options;
 
-$herz_information_show_hide = $herz_options['herz_information_show_hide'] == '' ? 1 : $herz_options['herz_information_show_hide'];
-
-if ( $herz_information_show_hide == 1 ) :
-
-$herz_information_address   =   $herz_options['herz_information_address'];
-$herz_information_mail      =   $herz_options['herz_information_mail'];
-$herz_information_phone     =   $herz_options['herz_information_phone'];
+$herz_social_network_title  =   $herz_options['herz_social_network_title'];
+$herz_information_contact = $herz_options['herz_information_contact'];
+$herz_information_recruitment = $herz_options['herz_information_recruitment'];
+$herz_information_faq = $herz_options['herz_information_faq'];
 
 ?>
 
 <div class="information">
     <div class="container-fluid d-lg-flex align-items-center justify-content-lg-end">
-        <div class="text">
-            <span>
-                <?php esc_html_e( 'Follow Doppelherz tại...', 'herz' ); ?>
-            </span>
-        </div>
+        <?php if ( !empty( $herz_social_network_title ) ) : ?>
+            <div class="text">
+                <span>
+                    <?php echo esc_html( $herz_social_network_title ); ?>
+                </span>
+            </div>
+        <?php endif; ?>
 
         <div class="information__social-network d-flex align-items-center">
             <?php herz_get_social_url(); ?>
         </div>
 
         <div class="information__contact">
-            <?php if ( $herz_information_address != '' ) : ?>
+            <ul class="d-flex">
+                <li>
+                    <a href="<?php echo esc_url( $herz_information_contact ); ?>">
+                        <img src="<?php echo esc_url( get_theme_file_uri( '/images/icon/icon-email.png' ) ); ?>" alt="<?php esc_attr_e( 'Thông tin liên hệ', 'herz' ); ?>">
+                        <span>
+                            <?php esc_html_e( 'Thông tin liên hệ', 'herz' ); ?>
+                        </span>
+                    </a>
+                </li>
 
-                <span>
-                    <i class="fas fa-map-marker" aria-hidden="true"></i>
-                    <?php echo esc_html( $herz_information_address ); ?>
-                </span>
+                <li>
+                    <a href="<?php echo esc_url( $herz_information_recruitment ); ?>">
+                        <img src="<?php echo esc_url( get_theme_file_uri( '/images/icon/icon-tuyen-dung.png' ) ); ?>" alt="<?php esc_attr_e( 'Thông tin tuyển dụng', 'herz' ); ?>">
+                        <span>
+                            <?php esc_html_e( 'Thông tin tuyển dụng', 'herz' ); ?>
+                        </span>
+                    </a>
+                </li>
 
-            <?php
-            endif;
+                <li>
+                    <a href="<?php echo esc_url( $herz_information_faq ); ?>">
+                        <img src="<?php echo esc_url( get_theme_file_uri( '/images/icon/icon-faq.png' ) ); ?>" alt="<?php esc_attr_e( 'Câu hỏi thường gặp', 'herz' ); ?>">
+                        <span>
+                            <?php esc_html_e( 'Câu hỏi thường gặp', 'herz' ); ?>
+                        </span>
+                    </a>
+                </li>
 
-            if ( $herz_information_mail != '' ) :
-            ?>
-
-                <span>
-                    <i class="fas fa-envelope"></i>
-                    <?php echo esc_html( $herz_information_mail ); ?>
-                </span>
-
-            <?php
-            endif;
-
-            if ( $herz_information_phone != '' ) :
-            ?>
-
-                <span>
-                    <i class="fas fa-mobile-alt"></i>
-                    <?php echo esc_html( $herz_information_phone ); ?>
-                </span>
-
-            <?php endif; ?>
+                <li class="dropdown search-box">
+                    <a href="#" class="" id="dropdownSearch" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <img src="<?php echo esc_url( get_theme_file_uri( '/images/icon/icon-search.png' ) ); ?>" alt="<?php esc_attr_e( 'Tìm kiếm', 'herz' ); ?>">
+                        <span>
+                            <?php esc_html_e( 'Tìm kiếm', 'herz' ); ?>
+                        </span>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownSearch">
+                        <?php get_search_form(); ?>
+                    </div>
+                </li>
+            </ul>
         </div>
     </div>
 </div>
-
-<?php
-
-endif;

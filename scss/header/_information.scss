@@ -1,5 +1,5 @@
 .information {
-  padding: 13px 0;
+  padding: 3px 0 4px;
 
   .text {
     margin-right: 16px;
@@ -9,6 +9,66 @@
       font-weight: 700;
       color: #806638;
       font-size: 12px;
+    }
+  }
+  ul {
+    position: relative;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    top: 5px;
+
+    li {
+      margin-right: 15px;
+      @include flexbox();
+
+      a {
+        color: $color-title-second;
+        @include flexbox();
+        @include flex-direction(column);
+        @include align-items(center);
+        @include flex(1);
+
+        span {
+          font-size: 12px;
+          font-weight: 700;
+          @include flexbox();
+          @include flex(1);
+          @include align-items(flex-end);
+          @include transform(translateY(-4px));
+        }
+        &:hover {
+          color: $color-hover;
+        }
+      }
+      &:last-child {
+        margin-right: 0;
+      }
+      &.search-box {
+        .dropdown-menu {
+          width: 300px;
+          min-width: inherit;
+          border: none;
+          padding: 5px 10px;
+          margin: 0;
+          background-color: $background-primary;
+        }
+        .search-form {
+          @include flexbox();
+
+          .search-field {
+            padding: 5px 10px;
+            border: none;
+            @include border-radius(0);
+            @include flex(1);
+          }
+          .search-submit {
+            padding: 5px 10px;
+            background-color: $color-primary;
+            @include border-radius(0);
+          }
+        }
+      }
     }
   }
 }

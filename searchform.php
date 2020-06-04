@@ -4,10 +4,8 @@
     <label for="<?php echo $herz_unique_id; ?>">
         <span class="screen-reader-text"><?php echo _x( 'Search for:', 'label', 'herz' ); ?></span>
     </label>
-    <input type="search" id="<?php echo $herz_unique_id; ?>" class="search-field" placeholder="<?php echo esc_attr_x( 'Search &hellip;', 'placeholder', 'herz' ); ?>" value="<?php echo get_search_query(); ?>" name="s" />
+    <input type="search" id="<?php echo $herz_unique_id; ?>" class="search-field" placeholder="<?php echo esc_attr_x( 'Tìm kiếm &hellip;', 'placeholder', 'herz' ); ?>" value="<?php echo get_search_query(); ?>" name="s" />
     <button type="submit" class="search-submit">
-        <span class="search-reader-text">
-            <?php echo _x( 'Search', 'submit button', 'herz' ); ?>
-        </span>
+        <?php echo _x( 'Tìm kiếm', 'submit button', 'herz' ); ?>
     </button>
 </form>

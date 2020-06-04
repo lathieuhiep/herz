@@ -247,6 +247,23 @@ Redux::setSection( $herz_opt_name, array(
     ),
 ));
 
+// Phone Config
+Redux::setSection( $herz_opt_name, array(
+    'title'         =>  esc_html__( 'Phone', 'herz' ),
+    'id'            =>  'herz_phone_config',
+    'desc'          =>  esc_html__( '', 'herz' ),
+    'subsection'    =>  true,
+    'fields'        =>  array(
+        array(
+            'id'        =>  'herz_number_phone',
+            'type'      =>  'text',
+            'title'     =>  'Phone number',
+            'default'   =>  '18001770',
+        ),
+    )
+));
+
+
 /* End General Options */
 
 /* Start Header Options */
@@ -313,35 +330,24 @@ Redux::setSection( $herz_opt_name, array(
     'fields'        =>  array(
 
         array(
-            'id'        =>  'herz_information_show_hide',
-            'type'      =>  'select',
-            'title'     =>  esc_html__( 'Show Or Hide Information', 'herz' ),
-            'default'   =>  1,
-            'options'   =>  array(
-                1   =>  esc_html__( 'Show', 'herz' ),
-                0   =>  esc_html__( 'Hide', 'herz' )
-            )
+            'id'        =>  'herz_information_contact',
+            'type'      =>  'text',
+            'title'     =>  esc_html__( 'Thông tin liên hệ (link)', 'herz' ),
+            'default'   =>  '#',
         ),
 
         array(
-            'id'        =>  'herz_information_address',
+            'id'        =>  'herz_information_recruitment',
             'type'      =>  'text',
-            'title'     =>  esc_html__( 'Address', 'herz' ),
-            'default'   =>  '988782, Our Street, S State.',
+            'title'     =>  esc_html__( 'Tuyển dụng (link)', 'herz' ),
+            'default'   =>  '#',
         ),
 
         array(
-            'id'        =>  'herz_information_mail',
+            'id'        =>  'herz_information_faq',
             'type'      =>  'text',
-            'title'     =>  esc_html__( 'Mail', 'herz' ),
-            'default'   =>  'info@domain.com',
-        ),
-
-        array(
-            'id'        =>  'herz_information_phone',
-            'type'      =>  'text',
-            'title'     =>  esc_html__( 'Phone', 'herz' ),
-            'default'   =>  '+1 234 567 186',
+            'title'     =>  esc_html__( 'FAQ', 'herz' ),
+            'default'   =>  '#',
         ),
 
     )
@@ -457,6 +463,13 @@ Redux::setSection( $herz_opt_name, array(
     'customizer_width'  =>  '400px',
     'icon'              =>  'el el-globe-alt',
     'fields'            =>  array(
+
+        array(
+            'id'        =>  'herz_social_network_title',
+            'type'      =>  'text',
+            'title'     =>  esc_html__( 'Title', 'herz' ),
+            'default'   =>  'Follow Doppelherz tại...',
+        ),
 
         array(
             'id'        =>  'herz_social_network_facebook',
