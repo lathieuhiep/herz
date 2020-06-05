@@ -1,0 +1,24 @@
+.element-testimonial-carousel {
+    .item {
+        .item-img {
+            margin-bottom: 30px;
+
+            img {
+                width: auto;
+                display: inline-block;
+            }
+        }
+        .item-desc {
+            font-size: 15px;
+            line-height: 1.2em;
+            max-width: 80%;
+            margin: 0 auto 15px;
+        }
+        .name {
+            margin: 0;
+            font-size: 15px;
+            font-weight: 700;
+            font-family: "Lato", sans-serif;
+        }
+    }
+}

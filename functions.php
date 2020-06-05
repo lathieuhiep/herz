@@ -448,6 +448,30 @@ function herz_post_share() {
 
 }
 
+/* Get Contact Form */
+function herz_get_form_cf7() {
+
+    $herz_contact_forms    =   array();
+    $herz_cf7              =   get_posts('post_type="wpcf7_contact_form"&numberposts=-1');
+
+    if ( $herz_cf7 ) :
+
+        foreach ( $herz_cf7 as $item ) :
+
+            $herz_contact_forms[$item->ID] = $item->post_title;
+
+        endforeach;
+
+    else :
+
+        $herz_contact_forms[esc_html__( "No contact forms found", "tz-gustoso-restaurant" )] = 0;
+
+    endif;
+
+    return $herz_contact_forms;
+
+}
+
 /* Start opengraph */
 function herz_doctype_opengraph( $output ) {
 	return $output . '

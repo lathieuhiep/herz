@@ -53,7 +53,9 @@ final class herz_plugin_elementor_widgets {
             'post-grid',
             'post-carousel',
             'about-text',
-            'product-carousel'
+            'product-carousel',
+            'testimonial-carousel',
+            'contact-cf7'
         ];
         
         foreach ( $build_widgets_filename as $widget_filename ) :

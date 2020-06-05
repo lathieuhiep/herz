@@ -20,6 +20,9 @@
         /* Element product carousel */
         elementorFrontend.hooks.addAction( 'frontend/element_ready/herz-product-carousel.default', ElementCarouselSlider );
 
+        /* Element testimonial carousel */
+        elementorFrontend.hooks.addAction( 'frontend/element_ready/herz-testimonial-carousel.default', ElementCarouselSlider );
+
     } );
 
 })( jQuery );
