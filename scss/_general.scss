@@ -147,6 +147,87 @@ pre {
   background-color: #ffffff;
   z-index: 99999;
 }
+.contact-us {
+  position: fixed;
+  top: 50%;
+  right: 0;
+
+  .item {
+    position: relative;
+    margin-bottom: 10px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  a {
+    color: #ffffff;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    width: 60px;
+    height: 60px;
+    line-height: 50px;
+    text-align: center;
+    border-radius: 50%;
+    overflow: hidden;
+    @include flexbox();
+    @include align-items(center);
+    @include justify-content(center);
+
+    i {
+      font-size: 32px;
+    }
+    img {
+      @include transition(all 0.4s ease-in-out);
+    }
+    &.phone {
+      background-color: $background-primary;
+
+      span {
+        display: inline-block;
+        font-size: 0;
+        font-weight: 700;
+        @include transition(all 0.4s ease-in-out);
+      }
+      &:hover {
+        width: 260px;
+        margin-right: 0;
+        padding: 0 10px;
+        border-radius: 25px 0 0 25px;
+
+        img {
+          margin-right: 5px;
+        }
+        span {
+          font-size: 42px;
+        }
+      }
+    }
+    &.facebook-link {
+      background-color: #395195;
+      &:hover {
+        i {
+          -webkit-animation: toTopFromBottom 0.4s forwards;
+          -moz-animation: toTopFromBottom 0.4s forwards;
+          animation: toTopFromBottom 0.4s forwards;
+        }
+      }
+    }
+    &.phone-hide {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 60px;
+      line-height: 60px;
+      background-color: $background-primary;
+      @include flexbox();
+      @include align-items(center);
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
 #back-top {
   background-color: $background-hover;
   opacity: 0;

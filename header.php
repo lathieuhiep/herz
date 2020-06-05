@@ -17,12 +17,25 @@
 <!--Include Loading Template-->
 <?php
 
+global $herz_options;
+$herz_number_phone = $herz_options['herz_number_phone'];
+$herz_link_facebook = $herz_options['herz_social_network_facebook'];
 get_template_part('template-parts/inc','loading');
 get_template_part('template-parts/header/inc','header');
 get_template_part( 'template-parts/navigation/inc', 'nav-top' );
 
 ?>
 <!--End Loading Template-->
+<div class="contact-us d-flex flex-column align-items-end">
+    <a class="phone icon" href="tel:<?php echo esc_attr( $herz_number_phone ); ?>">
+        <img src="<?php echo esc_url( get_theme_file_uri( '/images/icon/icon-phone.png' ) ) ?>" alt="phone">
+        <span><?php echo esc_html( $herz_number_phone ); ?></span>
+    </a>
+
+    <a class="facebook-link icon" href="<?php echo esc_url( $herz_link_facebook ); ?>" target="_blank">
+        <i class="fab fa-facebook-f"></i>
+    </a>
+</div>
 
 <div id="back-top">
     <a href="#">
