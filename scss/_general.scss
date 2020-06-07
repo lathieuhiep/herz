@@ -26,6 +26,18 @@
 
 @font-face {
   font-family: 'Lato';
+  src: url('fonts/lato/Lato-Semibold.eot');
+  src: url('fonts/lato/Lato-Semibold.eot?#iefix') format('embedded-opentype'),
+  url('fonts/lato/Lato-Semibold.woff2') format('woff2'),
+  url('fonts/lato/Lato-Semibold.woff') format('woff'),
+  url('fonts/lato/Lato-Semibold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Lato';
   src: url('fonts/lato/Lato-Bold.eot');
   src: url('fonts/lato/Lato-Bold.eot?#iefix') format('embedded-opentype'),
   url('fonts/lato/Lato-Bold.woff2') format('woff2'),

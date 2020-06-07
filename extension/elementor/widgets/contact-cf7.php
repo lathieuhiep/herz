@@ -62,7 +62,7 @@ class herz_widget_contact_cf7 extends Widget_Base {
     ?>
 
         <div class="element-contact-cf7">
-            <h3 class="heading">
+            <h3 class="heading text-center">
                 <?php echo wp_kses_post( $settings['heading'] ); ?>
             </h3>
             <div class="box">

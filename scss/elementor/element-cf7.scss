@@ -1,0 +1,68 @@
+.element-contact-cf7 {
+  background-color: #ffffff;
+  border-radius: 15px;
+  padding: 54px 90px 83px;
+
+  .heading {
+    font-size: 40px;
+    font-family: "Lato", sans-serif;
+    font-weight: 700;
+    color: $color-title;
+    line-height: 1.1em;
+  }
+  .custom-row {
+    margin-left: -8px;
+    margin-right: -8px;
+  }
+  .custom-col {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+  .form-group {
+    margin-bottom: 20px;
+
+    label {
+      font-weight: 600;
+    }
+    .form-control {
+      border-radius: 8px;
+      padding: 10px 15px;
+
+      &:focus {
+        border-color: #f8b5c0;
+      }
+    }
+  }
+  .submit-box {
+    .note {
+      font-style: italic;
+
+      span {
+        color: #254caf;
+        font-style: normal;
+      }
+    }
+  }
+  .btn-submit {
+    position: relative;
+    padding-top: 14px;
+
+    input {
+      &.wpcf7-submit {
+        border-radius: 8px;
+        font-weight: 700;
+        padding: 18px 38px 12px;
+        @include transition(all 0.4s ease-in-out);
+
+        &:hover {
+          background-color: #3c3c3c;
+        }
+      }
+    }
+    .ajax-loader {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+    }
+  }
+}
