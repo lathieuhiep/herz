@@ -198,7 +198,9 @@ pre {
 
       span {
         display: inline-block;
-        font-size: 0;
+        width: 0;
+        overflow: hidden;
+        font-size: 42px;
         font-weight: 700;
         @include transition(all 0.4s ease-in-out);
       }
@@ -212,7 +214,7 @@ pre {
           margin-right: 5px;
         }
         span {
-          font-size: 42px;
+          width: 199px;
         }
       }
     }

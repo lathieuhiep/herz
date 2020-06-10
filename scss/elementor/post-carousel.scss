@@ -8,6 +8,7 @@
     }
   }
   .item-post {
+    margin: 10px 0;
     @include flexbox();
     @include flex-direction(column);
     @include flex(1);

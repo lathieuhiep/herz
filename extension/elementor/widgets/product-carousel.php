@@ -102,6 +102,42 @@ class herz_widget_product_carousel extends Widget_Base {
 
         $this->end_controls_section();
 
+        /* Section More */
+        $this->start_controls_section(
+            'section_more',
+            [
+                'label' =>  esc_html__( 'More', 'herz' )
+            ]
+        );
+
+        $this->add_control(
+            'more_image',
+            [
+                'label' => esc_html__( 'Choose Image', 'herz' ),
+                'type' => Controls_Manager::MEDIA,
+                'default' => [
+                    'url' => Utils::get_placeholder_image_src(),
+                ],
+            ]
+        );
+
+        $this->add_control(
+            'more_link',
+            [
+                'label' => esc_html__( 'Link', 'herz' ),
+                'type' => Controls_Manager::URL,
+                'placeholder' => esc_html__( 'https://your-link.com', 'herz' ),
+                'show_external' => true,
+                'default' => [
+                    'url' => '',
+                    'is_external' => true,
+                    'nofollow' => true,
+                ],
+            ]
+        );
+
+        $this->end_controls_section();
+
         /* Section Layout */
         $this->start_controls_section(
             'section_layout',
@@ -333,6 +369,9 @@ class herz_widget_product_carousel extends Widget_Base {
             ],
         ];
 
+        $target_more = $settings['more_link']['is_external'] ? ' target=_blank' : '';
+        $nofollow_more = $settings['more_link']['nofollow'] ? ' rel=nofollow' : '';
+
         ?>
 
             <div class="element-product-carousel">
@@ -362,6 +401,19 @@ class herz_widget_product_carousel extends Widget_Base {
                         </a>
                     </div>
                     <?php endforeach; ?>
+
+                    <div class="item">
+                        <div class="item-box">
+                            <div class="item-img">
+                                <?php echo wp_get_attachment_image( $settings['more_image']['id'], 'full' ); ?>
+                            </div>
+                        </div>
+
+                        <a class="link-product" href="<?php echo esc_url( $settings['more_link']['url'] ); ?>"<?php echo esc_attr( $target_more . $nofollow_more ) ?>>
+                            <?php esc_html_e( 'Xem thêm', 'herz' ); ?>
+                            <i class="fas fa-chevron-right"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
 

@@ -38,7 +38,7 @@
     @include flex(1 auto);
   }
   .site-post-image {
-    height: 240px;
+    height: 184px;
 
     img {
       height: 100%;
@@ -52,7 +52,7 @@
     @include flex(1);
   }
   &:hover {
-    @include box-shadow(1px 0 6px 0 rgba(59, 59, 59, 0.2));
+    @include box-shadow(1px 0 15px 0 rgba(59, 59, 59, 0.2));
   }
 }
 .site-post-title {
@@ -160,5 +160,10 @@
     &:hover {
       color: $color-title;
     }
+  }
+}
+.cate-image {
+  img {
+    width: 100%;
   }
 }
