@@ -123,7 +123,7 @@ class herz_widget_about_text extends Widget_Base {
     ?>
         <div class="element-about-text">
             <div class="row align-items-end">
-                <div class="col-md-6">
+                <div class="col-12 col-lg-6">
                     <h3 class="heading">
                         <?php echo wp_kses_post( $settings['heading'] ); ?>
                     </h3>
@@ -131,7 +131,7 @@ class herz_widget_about_text extends Widget_Base {
                     <div class="row">
                         <?php foreach ( $settings['list'] as $item ) : ?>
 
-                        <div class="col-md-6 item-col d-flex flex-column">
+                        <div class="col-12 col-sm-6 item-col d-flex flex-column">
                             <div class="item">
                                 <div class="item-img">
                                     <?php echo wp_get_attachment_image( $item['list_image']['id'], 'full' ); ?>
@@ -153,7 +153,7 @@ class herz_widget_about_text extends Widget_Base {
                     </div>
                 </div>
 
-                <div class="col-md-6">
+                <div class="col-12 col-lg-6">
                     <div class="img-features">
                         <?php echo wp_get_attachment_image( $settings['image_features']['id'], 'full' ); ?>
                     </div>

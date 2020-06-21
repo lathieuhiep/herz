@@ -18,51 +18,59 @@
     padding-left: 8px;
     padding-right: 8px;
   }
-  .form-group {
-    margin-bottom: 20px;
+  .wpcf7-form {
+    .form-group {
+      margin-bottom: 20px;
 
-    label {
-      font-weight: 600;
-    }
-    .form-control {
-      border-radius: 8px;
-      padding: 10px 15px;
-
-      &:focus {
-        border-color: #f8b5c0;
+      label {
+        font-weight: 600;
       }
-    }
-  }
-  .submit-box {
-    .note {
-      font-style: italic;
-
-      span {
-        color: #254caf;
-        font-style: normal;
-      }
-    }
-  }
-  .btn-submit {
-    position: relative;
-    padding-top: 14px;
-
-    input {
-      &.wpcf7-submit {
+      .form-control {
         border-radius: 8px;
-        font-weight: 700;
-        padding: 18px 38px 12px;
-        @include transition(all 0.4s ease-in-out);
+        padding: 10px 15px;
 
-        &:hover {
-          background-color: #3c3c3c;
+        &:focus {
+          border-color: #f8b5c0;
+        }
+      }
+      select {
+        border-radius: 8px;
+        padding: 10px 15px !important;
+      }
+    }
+    .submit-box {
+      .note {
+        font-style: italic;
+
+        span {
+          color: #254caf;
+          font-style: normal;
         }
       }
     }
-    .ajax-loader {
-      position: absolute;
-      top: 50%;
-      left: 50%;
+    .btn-submit {
+      position: relative;
+      padding-top: 14px;
+
+      input {
+        &.wpcf7-submit {
+          border-radius: 8px;
+          font-weight: 700;
+          padding: 18px 38px 12px;
+          @include transition(all 0.4s ease-in-out);
+
+          &:hover {
+            background-color: #3c3c3c;
+          }
+        }
+      }
+      .ajax-loader {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+      }
     }
   }
+
+
 }

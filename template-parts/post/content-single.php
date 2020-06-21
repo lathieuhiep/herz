@@ -23,36 +23,6 @@ $herz_on_off_share_single = $herz_options['herz_on_off_share_single'];
             herz_link_page();
             ?>
         </div>
-
-        <div class="site-post-cat-tag">
-
-            <?php if( get_the_category() != false ): ?>
-
-                <p class="site-post-category">
-                    <?php
-                    esc_html_e('Category: ','herz');
-                    the_category( ' ' );
-                    ?>
-                </p>
-
-            <?php
-
-            endif;
-
-            if( get_the_tags() != false ):
-
-            ?>
-
-                <p class="site-post-tag">
-                    <?php
-                    esc_html_e( 'Tag: ','herz' );
-                    the_tags('',' ');
-                    ?>
-                </p>
-
-            <?php endif; ?>
-
-        </div>
     </div>
 
     <?php
@@ -67,10 +37,6 @@ $herz_on_off_share_single = $herz_options['herz_on_off_share_single'];
 </div>
 
 <?php
-herz_comment_form();
-
 get_template_part( 'template-parts/post/inc','related-post' );
 
-
-
-
+herz_comment_form();

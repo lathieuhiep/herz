@@ -9,7 +9,7 @@ $herz_information_faq = $herz_options['herz_information_faq'];
 ?>
 
 <div class="information">
-    <div class="container-fluid d-lg-flex align-items-center justify-content-lg-end">
+    <div class="container-fluid d-flex align-items-center justify-content-md-end">
         <?php if ( !empty( $herz_social_network_title ) ) : ?>
             <div class="text">
                 <span>

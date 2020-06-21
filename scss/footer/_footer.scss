@@ -21,24 +21,6 @@
     }
   }
 }
-.site-footer__multi--column {
-  border-top: 1px solid #d8d8d8;
-  padding: 77px 0 108px;
-
-  .item-col {
-    &:not(:last-child) {
-      &:after {
-        content: "";
-        position: absolute;
-        right: 15px;
-        top: 0;
-        height: 100%;
-        width: 1px;
-        background-color: #e6e6e6;
-      }
-    }
-  }
-}
 .site-footer__copyright {
   border-top: 1px solid $border-color;
   padding: 10px 0;

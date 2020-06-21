@@ -212,6 +212,7 @@ pre {
 
         img {
           margin-right: 5px;
+          animation: phonering-alo-circle-img-anim 1s infinite ease-in-out;
         }
         span {
           width: 199px;
@@ -241,6 +242,35 @@ pre {
     &:last-child {
       margin-bottom: 0;
     }
+  }
+}
+@-webkit-keyframes phonering-alo-circle-img-anim {
+  0% {
+    -webkit-transform:rotate(0) scale(1) skew(1deg)
+  }
+
+  10% {
+    -webkit-transform:rotate(-25deg) scale(1) skew(1deg)
+  }
+
+  20% {
+    -webkit-transform:rotate(25deg) scale(1) skew(1deg)
+  }
+
+  30% {
+    -webkit-transform:rotate(-25deg) scale(1) skew(1deg)
+  }
+
+  40% {
+    -webkit-transform:rotate(25deg) scale(1) skew(1deg)
+  }
+
+  50% {
+    -webkit-transform:rotate(0) scale(1) skew(1deg)
+  }
+
+  100% {
+    -webkit-transform:rotate(0) scale(1) skew(1deg)
   }
 }
 #back-top {

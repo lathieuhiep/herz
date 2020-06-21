@@ -38,7 +38,7 @@ $herz_taxonomy = get_queried_object();
 
                             <?php while ( have_posts() ) : the_post(); ?>
 
-                                <div id="post-<?php the_ID(); ?>" class="item-col d-flex flex-column col-12 col-md-6 col-lg-<?php echo esc_attr( 12 / $herz_blog_per_row ); ?>">
+                                <div id="post-<?php the_ID(); ?>" class="item-col d-flex flex-column col-12 col-sm-6 col-lg-<?php echo esc_attr( 12 / $herz_blog_per_row ); ?>">
                                     <?php
                                         if ( ! is_search() ):
                                             get_template_part( 'template-parts/archive/content', 'archive-info' );

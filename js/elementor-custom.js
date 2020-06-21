@@ -23,6 +23,9 @@
         /* Element testimonial carousel */
         elementorFrontend.hooks.addAction( 'frontend/element_ready/herz-testimonial-carousel.default', ElementCarouselSlider );
 
+        /* Element partners-carousel */
+        elementorFrontend.hooks.addAction( 'frontend/element_ready/herz-partners-carousel.default', ElementCarouselSlider );
+
     } );
 
 })( jQuery );

@@ -16,10 +16,6 @@
   position: relative;
 }
 .site-logo {
-  position: absolute;
-  top: -35px;
-  left: 0;
-
   a {
     display: inline-block;
   }
@@ -54,6 +50,11 @@
       padding-right: 15px;
       @include transition(all 0.4s ease-in-out);
 
+      &.unclickable {
+        > a {
+          cursor: default;
+        }
+      }
       a {
         padding: 0 4px;
         text-shadow: none;

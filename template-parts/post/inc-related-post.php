@@ -24,7 +24,7 @@ if ( !empty( $herz_term_cat_post ) ):
 
     <div class="site-single-post-related">
         <h3 class="title">
-            <?php esc_html_e( 'Related Post', 'herz' ); ?>
+            <?php esc_html_e( 'Bài viết liên quan', 'herz' ); ?>
         </h3>
 
         <div class="row">

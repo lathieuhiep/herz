@@ -52,7 +52,7 @@
     @include flex(1);
   }
   &:hover {
-    @include box-shadow(1px 0 15px 0 rgba(59, 59, 59, 0.2));
+    @include box-shadow(0 0 11px rgba(59, 59, 59, 0.5));
   }
 }
 .site-post-title {

@@ -55,7 +55,8 @@ final class herz_plugin_elementor_widgets {
             'about-text',
             'product-carousel',
             'testimonial-carousel',
-            'contact-cf7'
+            'contact-cf7',
+            'partners-carousel'
         ];
         
         foreach ( $build_widgets_filename as $widget_filename ) :

@@ -99,23 +99,23 @@ if ( post_password_required() ) {
 
     $herz_comments_args = array(
 
-        'title_reply'       => '<span>'.esc_html__( 'Leave a comment','herz' ).'</span>',
+        'title_reply'       => '<span>'.esc_html__( 'Để lại bình luận','herz' ).'</span>',
 
         'fields' => apply_filters( 'comment_form_default_fields',
             array(
 
                 'comment_notes_before' => '<div class="comment-fields-row order-1"><div class="row">',
 
-                'author' => '<div class="col-12 col-sm-6 col-md-6"><div class="form-comment-item"><input id="author" placeholder="'.esc_html__('Full Name','herz').'" class="form-control" name="author" type="text" value="' . esc_attr( $herz_commenter['comment_author'] ) . '" size="30" ' . $herz_comments_args . ' /></div></div>',
+                'author' => '<div class="col-12 col-sm-6 col-md-6"><div class="form-comment-item"><input id="author" placeholder="'.esc_html__('Họ tên','herz').'" class="form-control" name="author" type="text" value="' . esc_attr( $herz_commenter['comment_author'] ) . '" size="30" ' . $herz_comments_args . ' /></div></div>',
 
-                'email' => '<div class="col-12 col-sm-6 col-md-6"><div class="form-comment-item"><input id="email" placeholder="'.esc_html__('Your Email','herz').'" class="form-control" name="email" type="text" value="' . esc_attr( $herz_commenter['comment_author_email'] ) . '" size="30" ' . $herz_comments_args . ' /></div></div>',
+                'email' => '<div class="col-12 col-sm-6 col-md-6"><div class="form-comment-item"><input id="email" placeholder="'.esc_html__('Email của bạn','herz').'" class="form-control" name="email" type="text" value="' . esc_attr( $herz_commenter['comment_author_email'] ) . '" size="30" ' . $herz_comments_args . ' /></div></div>',
 
                 'comment_notes_after' => '</div></div>',
 
             )
         ),
 
-        'comment_field' => '<div class="form-comment-item form-comment-field order-3"><textarea rows="7" id="comment" placeholder="'.esc_html__('Comment','herz').'" name="comment" class="form-control"></textarea></div>',
+        'comment_field' => '<div class="form-comment-item form-comment-field order-3"><textarea rows="7" id="comment" placeholder="'.esc_html__('Bình luận','herz').'" name="comment" class="form-control"></textarea></div>',
 
     );
 
