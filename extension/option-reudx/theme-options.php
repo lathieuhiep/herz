@@ -777,12 +777,47 @@ Redux::setSection( $herz_opt_name, array(
         ),
 
         array(
+            'id'            =>  'herz_footer_multi_column_1_mobile',
+            'type'          =>  'slider',
+            'title'         =>  esc_html__( 'Column width 1 ( mobile )', 'herz' ),
+            'subtitle'      =>  esc_html__( 'Select the number of columns to display in the footer', 'herz' ),
+            'desc'          =>  esc_html__( 'Min: 1, max: 12, default value: 1', 'herz' ),
+            'default'       =>  12,
+            'min'           =>  1,
+            'step'          =>  1,
+            'max'           =>  12,
+            'display_value' =>  'label',
+            'required'      =>  array(
+                array( 'herz_footer_multi_column', 'equals','1', '2', '3', '4' ),
+                array( 'herz_footer_multi_column', '!=', '0' ),
+            )
+        ),
+
+        array(
             'id'            =>  'herz_footer_multi_column_2',
             'type'          =>  'slider',
             'title'         =>  esc_html__( 'Column width 2', 'herz' ),
             'subtitle'      =>  esc_html__( 'Select the number of columns to display in the footer', 'herz' ),
             'desc'          =>  esc_html__( 'Min: 1, max: 12, default value: 1', 'herz' ),
             'default'       =>  3,
+            'min'           =>  1,
+            'step'          =>  1,
+            'max'           =>  12,
+            'display_value' =>  'label',
+            'required'      =>  array(
+                array( 'herz_footer_multi_column', 'equals', '2', '3', '4' ),
+                array( 'herz_footer_multi_column', '!=', '1' ),
+                array( 'herz_footer_multi_column', '!=', '0' ),
+            )
+        ),
+
+        array(
+            'id'            =>  'herz_footer_multi_column_2_mobile',
+            'type'          =>  'slider',
+            'title'         =>  esc_html__( 'Column width 2 ( mobile )', 'herz' ),
+            'subtitle'      =>  esc_html__( 'Select the number of columns to display in the footer', 'herz' ),
+            'desc'          =>  esc_html__( 'Min: 1, max: 12, default value: 1', 'herz' ),
+            'default'       =>  12,
             'min'           =>  1,
             'step'          =>  1,
             'max'           =>  12,
@@ -814,9 +849,48 @@ Redux::setSection( $herz_opt_name, array(
         ),
 
         array(
+            'id'            =>  'herz_footer_multi_column_3_mobile',
+            'type'          =>  'slider',
+            'title'         =>  esc_html__( 'Column width 3 ( mobile )', 'herz' ),
+            'subtitle'      =>  esc_html__( 'Select the number of columns to display in the footer', 'herz' ),
+            'desc'          =>  esc_html__( 'Min: 1, max: 12, default value: 1', 'herz' ),
+            'default'       =>  12,
+            'min'           =>  1,
+            'step'          =>  1,
+            'max'           =>  12,
+            'display_value' =>  'label',
+            'required'      =>  array(
+                array( 'herz_footer_multi_column', 'equals', '3', '4' ),
+                array( 'herz_footer_multi_column', '!=', '1' ),
+                array( 'herz_footer_multi_column', '!=', '2' ),
+                array( 'herz_footer_multi_column', '!=', '0' ),
+            )
+        ),
+
+        array(
             'id'            =>  'herz_footer_multi_column_4',
             'type'          =>  'slider',
             'title'         =>  esc_html__( 'Column width 4', 'herz' ),
+            'subtitle'      =>  esc_html__( 'Select the number of columns to display in the footer', 'herz' ),
+            'desc'          =>  esc_html__( 'Min: 1, max: 12, default value: 1', 'herz' ),
+            'default'       =>  12,
+            'min'           =>  1,
+            'step'          =>  1,
+            'max'           =>  12,
+            'display_value' =>  'label',
+            'required'      =>  array(
+                array( 'herz_footer_multi_column',  'equals', '4' ),
+                array( 'herz_footer_multi_column', '!=', '1' ),
+                array( 'herz_footer_multi_column', '!=', '2' ),
+                array( 'herz_footer_multi_column', '!=', '3' ),
+                array( 'herz_footer_multi_column', '!=', '0' ),
+            )
+        ),
+
+        array(
+            'id'            =>  'herz_footer_multi_column_4_mobile',
+            'type'          =>  'slider',
+            'title'         =>  esc_html__( 'Column width 4 ( mobile )', 'herz' ),
             'subtitle'      =>  esc_html__( 'Select the number of columns to display in the footer', 'herz' ),
             'desc'          =>  esc_html__( 'Min: 1, max: 12, default value: 1', 'herz' ),
             'default'       =>  3,

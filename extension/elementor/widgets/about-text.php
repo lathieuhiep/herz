@@ -131,7 +131,7 @@ class herz_widget_about_text extends Widget_Base {
                     <div class="row">
                         <?php foreach ( $settings['list'] as $item ) : ?>
 
-                        <div class="col-12 col-sm-6 item-col d-flex flex-column">
+                        <div class="col-6 item-col d-flex flex-column">
                             <div class="item">
                                 <div class="item-img">
                                     <?php echo wp_get_attachment_image( $item['list_image']['id'], 'full' ); ?>

@@ -343,6 +343,8 @@
 
   .information {
     padding-top: 15px;
+    padding-bottom: 15px;
+
     > div {
       @include flex-wrap(wrap);
     }
@@ -356,9 +358,7 @@
       @include justify-content(flex-end);
     }
     .information__contact {
-      margin-top: 15px;
-      @include flex(0 0 100%);
-      max-width: 100%;
+      display: none;
     }
   }
   .site-sidebar {
@@ -509,6 +509,18 @@
 
 @media ( max-width: 480px ) {
 
+  .element-about-text {
+    .item {
+      .item-img {
+        img {
+          width: 120px;
+        }
+      }
+      .item-title {
+        font-size: 15px;
+      }
+    }
+  }
   .comments-area {
     .comment-list {
       li {
@@ -526,23 +538,6 @@
         ul {
           &.children {
             padding-left: 10px;
-          }
-        }
-      }
-    }
-  }
-  /* woocommerce */
-  .woocommerce {
-    ul {
-      &.products {
-        &.columns-3,
-        &.columns-4,
-        &.columns-5 {
-          li {
-            &.product {
-              @include flex(0 0 50%);
-              width: 50%;
-            }
           }
         }
       }
