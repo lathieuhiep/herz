@@ -390,10 +390,21 @@ class herz_widget_product_carousel extends Widget_Base {
                             <div class="item-img">
                                 <?php echo wp_get_attachment_image( $item['list_image']['id'], 'full' ); ?>
                             </div>
-
                             <h4 class="title-product">
                                 <?php echo esc_html( $item['list_title'] ); ?>
                             </h4>
+                            <div class="item-desc d-flex align-items-center">
+                                <p>
+                                    <?php
+                                    if ( has_excerpt() ) :
+                                        echo esc_html( wp_trim_words( get_the_excerpt(), 50, '...' ) );
+                                    else:
+                                        echo esc_html( wp_trim_words( get_the_content(), 50, '...' ) );
+                                    endif;
+
+                                    ?>
+                                </p>
+                            </div>
                         </div>
                         <a class="link-product" href="<?php echo esc_url( $item['list_link']['url'] ); ?>"<?php echo esc_attr( $target . $nofollow ) ?>>
                             <?php esc_html_e( 'Thông tin chi tiết', 'herz' ); ?>
