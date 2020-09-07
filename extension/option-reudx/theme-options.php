@@ -260,6 +260,13 @@ Redux::setSection( $herz_opt_name, array(
             'title'     =>  'Phone number',
             'default'   =>  '18001770',
         ),
+
+        array(
+            'id'        =>  'herz_zalo_number_phone',
+            'type'      =>  'text',
+            'title'     =>  'Zalo',
+            'default'   =>  '0981429466',
+        ),
     )
 ));
 

@@ -516,22 +516,27 @@ add_action( 'wp_head', 'herz_opengraph', 5 );
 /* End opengraph */
 
 /* Start Facebook SDK */
-function herz_facebook_sdk() {
+function herz_action_footer() {
+    global $herz_options;
+    $herz_zalo = $herz_options['herz_zalo_number_phone'];
+
+    if ( !empty( $herz_zalo ) ) :
+?>
+        <a href="http://zalo.me/<?php echo esc_attr( $herz_zalo ); ?>" class="zalo-chat" target="_blank">
+            <img src="<?php echo esc_url( get_theme_file_uri( '/images/icon/zalo.svg' ) ) ?>" alt="zalo">
+        </a>
+<?php
+    endif;
 
 	if ( is_single() ) :
-
 ?>
-
-        <div id="fb-root"></div>
-        <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v6.0"></script>
-
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v6.0"></script>
 <?php
-
 	endif;
-
 }
 
-add_action( 'wp_footer', 'herz_facebook_sdk' );
+add_action( 'wp_footer', 'herz_action_footer' );
 
 /* End share */
 function ccw_search_by_title_only( $search, &$wp_query )
