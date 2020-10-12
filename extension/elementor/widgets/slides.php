@@ -992,6 +992,9 @@ class herz_widget_slides extends Widget_Base {
 
                 <div class="element-slides__item elementor-repeater-item-<?php echo esc_attr( $item['_id'] ); ?>">
                     <div class="element-slides__item--bg"></div>
+                    <?php if( $herz_slides_link['url'] ) : ?>
+                        <a class="item-link" href="<?php echo esc_url( $herz_slides_link['url'] ); ?>" <?php echo ( $herz_slides_link['is_external'] ? 'target="_blank"' : '' ); ?>></a>
+                    <?php endif; ?>
 
                     <div class="element-slides__item--inner">
                         <?php if ( $item['background_overlay'] == 'yes' ) : ?>
@@ -1017,15 +1020,7 @@ class herz_widget_slides extends Widget_Base {
 
                                 <?php if ( !empty( $item['button_text'] ) ) : ?>
                                     <div class="element-slides__item--link">
-                                        <?php if ( !empty( $herz_slides_link['url'] ) ) : ?>
-                                            <a href="<?php echo esc_url( $herz_slides_link['url'] ); ?>" <?php echo ( $herz_slides_link['is_external'] ? 'target="_blank"' : '' ); ?>>
-                                                <?php echo esc_html( $item['button_text'] ); ?>
-                                            </a>
-                                        <?php
-                                        else:
-                                            echo esc_html( $item['button_text'] );
-                                        endif;
-                                        ?>
+                                        <?php echo esc_html( $item['button_text'] ); ?>
                                     </div>
                                 <?php endif; ?>
                             </div>
@@ -1068,6 +1063,9 @@ class herz_widget_slides extends Widget_Base {
 
                 <div class="element-slides__item elementor-repeater-item-{{ item._id }}">
                     <div class="element-slides__item--bg"></div>
+                    <# if ( item.link.url ) { #>
+                        <a class="item-link" href="{{ item.link.url }}"{{ target }}></a>
+                    <# } #>
 
                     <div class="element-slides__item--inner">
                         <# if ( item.background_overlay === 'yes' ) { #>
@@ -1090,13 +1088,7 @@ class herz_widget_slides extends Widget_Base {
 
                                 <# if ( item.button_text ) { #>
                                     <div class="element-slides__item--link">
-                                        <# if ( item.link.url ) { #>
-                                            <a href="{{ item.link.url }}"{{ target }}>
-                                                {{{ item.button_text }}}
-                                            </a>
-                                        <# } else { #>
-                                            {{{ item.button_text }}}
-                                        <# } #>
+                                        {{{ item.button_text }}}
                                     </div>
                                 <# } #>
                             </div>
