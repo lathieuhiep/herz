@@ -78,11 +78,16 @@
   span {
     display: inline-block;
     margin-right: 5px;
+    color: #666667;
+    font-size: 16px;
 
+    &:first-child {
+      color: #0872b9;
+    }
     &:after {
       display: inline-block;
-      content: '/';
-      margin-left: 10px;
+      content: '-';
+      margin-left: 3px;
       margin-right: 0;
     }
     &:last-child {

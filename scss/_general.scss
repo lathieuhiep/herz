@@ -3,60 +3,29 @@
 }
 
 @font-face {
-  font-family: 'Lato';
-  src: url('fonts/lato/Lato-Light.eot');
-  src: url('fonts/lato/Lato-Light.eot?#iefix') format('embedded-opentype'),
-  url('fonts/lato/Lato-Light.woff2') format('woff2'),
-  url('fonts/lato/Lato-Light.woff') format('woff'),
-  url('fonts/lato/Lato-Light.ttf') format('truetype');
-  font-weight: 300;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Lato';
-  src: url('fonts/lato/Lato-Regular.eot');
-  src: url('fonts/lato/Lato-Regular.eot?#iefix') format('embedded-opentype'),
-  url('fonts/lato/Lato-Regular.woff2') format('woff2'),
-  url('fonts/lato/Lato-Regular.woff') format('woff'),
-  url('fonts/lato/Lato-Regular.ttf') format('truetype');
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Lato';
-  src: url('fonts/lato/Lato-Semibold.eot');
-  src: url('fonts/lato/Lato-Semibold.eot?#iefix') format('embedded-opentype'),
-  url('fonts/lato/Lato-Semibold.woff2') format('woff2'),
-  url('fonts/lato/Lato-Semibold.woff') format('woff'),
-  url('fonts/lato/Lato-Semibold.ttf') format('truetype');
-  font-weight: 600;
+  font-family: 'San Francisco Display';
+  src: url('fonts/SanFranciscoText/SanFranciscoText-BoldG1.eot');
+  src: url('fonts/SanFranciscoText/SanFranciscoText-BoldG1.eot?#iefix') format('embedded-opentype'),
+  url('fonts/SanFranciscoText/SanFranciscoText-BoldG1.woff2') format('woff2'),
+  url('fonts/SanFranciscoText/SanFranciscoText-BoldG1.woff') format('woff'),
+  url('fonts/SanFranciscoText/SanFranciscoText-BoldG1.ttf') format('truetype');
+  font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Lato';
-  src: url('fonts/lato/Lato-Bold.eot');
-  src: url('fonts/lato/Lato-Bold.eot?#iefix') format('embedded-opentype'),
-  url('fonts/lato/Lato-Bold.woff2') format('woff2'),
-  url('fonts/lato/Lato-Bold.woff') format('woff'),
-  url('fonts/lato/Lato-Bold.ttf') format('truetype');
-  font-weight: 700;
+  font-family: 'San Francisco Display';
+  src: url('fonts/SanFranciscoText/SanFranciscoDisplay-Regular.eot');
+  src: url('fonts/SanFranciscoText/SanFranciscoDisplay-Regular.eot?#iefix') format('embedded-opentype'),
+  url('fonts/SanFranciscoText/SanFranciscoDisplay-Regular.woff2') format('woff2'),
+  url('fonts/SanFranciscoText/SanFranciscoDisplay-Regular.woff') format('woff'),
+  url('fonts/SanFranciscoText/SanFranciscoDisplay-Regular.ttf') format('truetype');
+  font-weight: 400;
   font-style: normal;
+  font-display: swap;
 }
 
-@font-face {
-  font-family: 'LatoHeavy';
-  src: url('fonts/latoheavy/Lato-Heavy.eot');
-  src: url('fonts/latoheavy/Lato-Heavy.eot?#iefix') format('embedded-opentype'),
-  url('fonts/latoheavy/Lato-Heavy.woff2') format('woff2'),
-  url('fonts/latoheavy/Lato-Heavy.woff') format('woff'),
-  url('fonts/latoheavy/Lato-Heavy.ttf') format('truetype');
-  font-weight: 900;
-  font-style: normal;
-}
 html {
   min-height: 100%;
 }
@@ -77,7 +46,7 @@ body {
 h1, h2, h3, h4, h5, h6 {
   margin: 0 0 15px;
   font-family: $font-family-title;
-  font-weight: 900;
+  font-weight: 700;
   color: $color-title;
 }
 h1 {
@@ -448,7 +417,13 @@ pre {
 /* Breadcrumbs */
 .breadcrumbs {
   .breadcrumbs-col {
-    padding: 15px 0;
-    border-bottom: 1px solid #eeeeee;
+    padding: 30px 0 0 0;
+    font-weight: 700;
+
+    span {
+      &:last-child {
+        color: $color-hover;
+      }
+    }
   }
 }

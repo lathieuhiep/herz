@@ -357,20 +357,17 @@ function herz_post_meta() {
 
     <div class="site-post-meta">
         <span class="site-post-author">
-            <?php esc_html_e( 'Author:','herz' ); ?>
-
-            <a href="<?php echo get_author_posts_url( get_the_author_meta('ID') );?>">
-                <?php the_author();?>
-            </a>
+            <?php the_author();?>
         </span>
 
         <span class="site-post-date">
-            <?php esc_html_e( 'Post date: ','herz' ); the_date(); ?>
+            <?php echo esc_html( human_time_diff( get_the_time('U'), current_time('timestamp') ) ); ?>
         </span>
 
-        <span class="site-post-comments">
+        <span class="site-post-cate">
             <?php
-            comments_popup_link( '0 '. esc_html__('Comment','herz'),'1 '. esc_html__('Comment','herz'), '% '. esc_html__('Comments','herz') );
+            $category = get_the_category();
+            echo esc_html( $category[0]->cat_name );
             ?>
         </span>
     </div>
@@ -379,6 +376,10 @@ function herz_post_meta() {
 }
 /* End Post Meta */
 
+/* Function which displays your post date in time ago format */
+function meks_time_ago() {
+    return human_time_diff( get_the_date( 'U' ), current_time( 'timestamp' ) ).' '.__( 'ago' );
+}
 /* Start Link Pages */
 function herz_link_page() {
 
