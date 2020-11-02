@@ -16,12 +16,18 @@ $herz_on_off_share_single = $herz_options['herz_on_off_share_single'];
 
         <?php herz_post_meta(); ?>
 
-        <div class="site-post-excerpt">
+        <div class="site-post-excerpt style-post-content">
             <?php
             the_content();
 
             herz_link_page();
             ?>
+        </div>
+
+        <div class="read-more-single text-center">
+            <a href="javascript:;">
+                <?php esc_html_e('Đọc tiếp', 'herz'); ?>
+            </a>
         </div>
     </div>
 

@@ -4,6 +4,18 @@
 
 @font-face {
   font-family: 'San Francisco Display';
+  src: url('fonts/SanFranciscoText/SanFranciscoDisplay-Regular.eot');
+  src: url('fonts/SanFranciscoText/SanFranciscoDisplay-Regular.eot?#iefix') format('embedded-opentype'),
+  url('fonts/SanFranciscoText/SanFranciscoDisplay-Regular.woff2') format('woff2'),
+  url('fonts/SanFranciscoText/SanFranciscoDisplay-Regular.woff') format('woff'),
+  url('fonts/SanFranciscoText/SanFranciscoDisplay-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'San Francisco Display';
   src: url('fonts/SanFranciscoText/SanFranciscoText-BoldG1.eot');
   src: url('fonts/SanFranciscoText/SanFranciscoText-BoldG1.eot?#iefix') format('embedded-opentype'),
   url('fonts/SanFranciscoText/SanFranciscoText-BoldG1.woff2') format('woff2'),
@@ -16,12 +28,12 @@
 
 @font-face {
   font-family: 'San Francisco Display';
-  src: url('fonts/SanFranciscoText/SanFranciscoDisplay-Regular.eot');
-  src: url('fonts/SanFranciscoText/SanFranciscoDisplay-Regular.eot?#iefix') format('embedded-opentype'),
-  url('fonts/SanFranciscoText/SanFranciscoDisplay-Regular.woff2') format('woff2'),
-  url('fonts/SanFranciscoText/SanFranciscoDisplay-Regular.woff') format('woff'),
-  url('fonts/SanFranciscoText/SanFranciscoDisplay-Regular.ttf') format('truetype');
-  font-weight: 400;
+  src: url('fonts/SanFranciscoText/SanFranciscoText-BoldG3.eot');
+  src: url('fonts/SanFranciscoText/SanFranciscoText-BoldG3.eot?#iefix') format('embedded-opentype'),
+  url('fonts/SanFranciscoText/SanFranciscoText-BoldG3.woff2') format('woff2'),
+  url('fonts/SanFranciscoText/SanFranciscoText-BoldG3.woff') format('woff'),
+  url('fonts/SanFranciscoText/SanFranciscoText-BoldG3.ttf') format('truetype');
+  font-weight: 900;
   font-style: normal;
   font-display: swap;
 }

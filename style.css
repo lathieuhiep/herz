@@ -53,6 +53,15 @@ Text Domain: herz
 
 @font-face {
   font-family: 'San Francisco Display';
+  src: url("fonts/SanFranciscoText/SanFranciscoDisplay-Regular.eot");
+  src: url("fonts/SanFranciscoText/SanFranciscoDisplay-Regular.eot?#iefix") format("embedded-opentype"), url("fonts/SanFranciscoText/SanFranciscoDisplay-Regular.woff2") format("woff2"), url("fonts/SanFranciscoText/SanFranciscoDisplay-Regular.woff") format("woff"), url("fonts/SanFranciscoText/SanFranciscoDisplay-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'San Francisco Display';
   src: url("fonts/SanFranciscoText/SanFranciscoText-BoldG1.eot");
   src: url("fonts/SanFranciscoText/SanFranciscoText-BoldG1.eot?#iefix") format("embedded-opentype"), url("fonts/SanFranciscoText/SanFranciscoText-BoldG1.woff2") format("woff2"), url("fonts/SanFranciscoText/SanFranciscoText-BoldG1.woff") format("woff"), url("fonts/SanFranciscoText/SanFranciscoText-BoldG1.ttf") format("truetype");
   font-weight: 700;
@@ -62,9 +71,9 @@ Text Domain: herz
 
 @font-face {
   font-family: 'San Francisco Display';
-  src: url("fonts/SanFranciscoText/SanFranciscoDisplay-Regular.eot");
-  src: url("fonts/SanFranciscoText/SanFranciscoDisplay-Regular.eot?#iefix") format("embedded-opentype"), url("fonts/SanFranciscoText/SanFranciscoDisplay-Regular.woff2") format("woff2"), url("fonts/SanFranciscoText/SanFranciscoDisplay-Regular.woff") format("woff"), url("fonts/SanFranciscoText/SanFranciscoDisplay-Regular.ttf") format("truetype");
-  font-weight: 400;
+  src: url("fonts/SanFranciscoText/SanFranciscoText-BoldG3.eot");
+  src: url("fonts/SanFranciscoText/SanFranciscoText-BoldG3.eot?#iefix") format("embedded-opentype"), url("fonts/SanFranciscoText/SanFranciscoText-BoldG3.woff2") format("woff2"), url("fonts/SanFranciscoText/SanFranciscoText-BoldG3.woff") format("woff"), url("fonts/SanFranciscoText/SanFranciscoText-BoldG3.ttf") format("truetype");
+  font-weight: 900;
   font-style: normal;
   font-display: swap;
 }
@@ -1617,10 +1626,29 @@ section.widget .post_widget_warp .post_widget__item .item-meta i.fa {
 
 .site-single .site-post-excerpt {
   margin-bottom: 15px;
+  height: 870px;
+  overflow: hidden;
+}
+
+.site-single .style-post-content {
+  -webkit-box-shadow: 0px 30px 15px -15px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 30px 15px -15px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 30px 15px -15px rgba(0, 0, 0, 0.3);
 }
 
 .site-single .site-sidebar {
   padding-top: 50px;
+}
+
+.site-single .read-more-single {
+  margin-top: 30px;
+}
+
+.site-single .read-more-single a {
+  display: inline-block;
+  font-size: 20px;
+  font-weight: 900;
+  text-transform: uppercase;
 }
 
 .site-post-single-item .site-post-meta {

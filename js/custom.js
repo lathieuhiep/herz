@@ -53,6 +53,15 @@
         $( document ).general_owlCarousel_custom( '.site-post-slides' );
         /* End Gallery Single */
 
+        /* Click read more single */
+        $('.read-more-single').on('click', function (e) {
+            e.preventDefault();
+            var pos = $(this).position();
+            $(this).closest('.site-post-content').find('.site-post-excerpt').removeClass('style-post-content').css("height", "auto");
+            $( 'html, body' ).scrollTop(pos.top);
+            $(this).closest('.read-more-single').remove();
+        })
+
     });
 
     $( window ).on( "load", function() {

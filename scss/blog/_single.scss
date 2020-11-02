@@ -10,9 +10,23 @@
   }
   .site-post-excerpt {
     margin-bottom: 15px;
+    height: 870px;
+    overflow: hidden;
+  }
+  .style-post-content {
+    @include box-shadow(0px 30px 15px -15px rgba(0, 0, 0, 0.3));
   }
   .site-sidebar {
     padding-top: 50px;
+  }
+  .read-more-single {
+    margin-top: 30px;
+    a {
+      display: inline-block;
+      font-size: 20px;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
   }
 }
 .site-post-single-item {
