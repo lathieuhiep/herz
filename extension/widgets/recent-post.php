@@ -76,11 +76,11 @@ class herz_recent_post_widget extends WP_Widget {
                     $post_query->the_post();
                 ?>
 
-                    <div class="post_widget__item d-flex">
+                    <div class="post_widget__item">
                         <div class="item-image">
                             <?php
                             if( has_post_thumbnail() ):
-                                the_post_thumbnail( 'medium' );
+                                the_post_thumbnail( 'medium_large' );
                             else:
                             ?>
                                 <img src="<?php echo esc_url( get_theme_file_uri( '/images/no-image.png' ) ); ?>" alt="post">
@@ -94,11 +94,18 @@ class herz_recent_post_widget extends WP_Widget {
                                 </a>
                             </h4>
 
-                            <p class="item-meta">
-                                <i class="fa fa-calendar" aria-hidden="true"></i>
-                                <?php echo get_the_date(); ?>
+                            <p>
+                                <?php
+                                if( has_excerpt() ) :
+                                    echo wp_trim_words( get_the_excerpt(), 30, '...' );
+                                else:
+                                    echo wp_trim_words( get_the_content(), 30, '...' );
+                                endif;
+                                ?>
                             </p>
                         </div>
+
+                        <?php herz_post_meta( true ); ?>
                     </div>
 
                 <?php

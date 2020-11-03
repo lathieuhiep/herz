@@ -30,19 +30,11 @@ $herz_on_off_share_single = $herz_options['herz_on_off_share_single'];
             </a>
         </div>
     </div>
-
-    <?php
-
-    if ( $herz_on_off_share_single == 1 || $herz_on_off_share_single == null ) :
-
-        herz_post_share();
-
-    endif;
-
-    ?>
 </div>
 
 <?php
-get_template_part( 'template-parts/post/inc','related-post' );
-
 herz_comment_form();
+
+if ( $herz_on_off_share_single == 1 || $herz_on_off_share_single == null ) :
+    herz_post_share();
+endif;

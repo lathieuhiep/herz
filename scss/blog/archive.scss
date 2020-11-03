@@ -74,8 +74,10 @@
 .site-post-meta {
   font-size: 12px;
   margin-bottom: 5px;
+  @include flexbox();
+  @include flex-wrap(wrap);
 
-  span {
+  > span {
     display: inline-block;
     margin-right: 5px;
     color: #666667;
@@ -91,6 +93,8 @@
       margin-right: 0;
     }
     &:last-child {
+      margin-right: 0;
+
       &:after {
         display: none;
       }
@@ -101,6 +105,13 @@
       &:hover {
         color: $color-primary;
       }
+    }
+  }
+  .site-post-author {
+    overflow: hidden;
+    img {
+      margin-right: 5px;
+      @include border-radius(50%);
     }
   }
 }

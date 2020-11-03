@@ -352,12 +352,17 @@ function herz_col_sidebar() {
 /* End Get col global */
 
 /* Start Post Meta */
-function herz_post_meta() {
+function herz_post_meta( $getAvatar = false ) {
 ?>
 
     <div class="site-post-meta">
         <span class="site-post-author">
-            <?php the_author();?>
+            <?php
+            if ( $getAvatar != false ) :
+                echo get_avatar( get_the_author_meta( 'ID' ), 20 );
+            endif;
+            ?>
+            <span><?php the_author();?></span>
         </span>
 
         <span class="site-post-date">

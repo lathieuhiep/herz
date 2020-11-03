@@ -32,6 +32,8 @@ get_template_part( 'template-parts/breadcrumbs/inc', 'breadcrumbs' );
             endif;
             ?>
         </div>
+
+        <?php get_template_part( 'template-parts/post/inc','related-post' ); ?>
     </div>
 </div>
 

@@ -180,11 +180,10 @@ section {
           margin-bottom: 0;
         }
         .item-image {
-          width: 110px;
-          @include flex(0 0 auto);
-        }
-        .item-content {
-          padding-left: 15px;
+          margin-bottom: 10px;
+          img {
+            width: 100%;
+          }
         }
         .item-title {
           font-size: 14px;
@@ -196,6 +195,14 @@ section {
 
           i.fa {
             margin-right: 5px;
+          }
+        }
+        .item-content {
+          margin-bottom: 10px;
+        }
+        .site-post-meta {
+          > span {
+            font-size: 12px;
           }
         }
       }

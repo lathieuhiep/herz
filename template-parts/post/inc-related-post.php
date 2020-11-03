@@ -49,13 +49,15 @@ if ( !empty( $herz_term_cat_post ) ):
                             <p>
                                 <?php
                                 if( has_excerpt() ) :
-                                    echo wp_trim_words( get_the_excerpt(), 15, '...' );
+                                    echo wp_trim_words( get_the_excerpt(), 30, '...' );
                                 else:
-                                    echo wp_trim_words( get_the_content(), 15, '...' );
+                                    echo wp_trim_words( get_the_content(), 30, '...' );
                                 endif;
                                 ?>
                             </p>
                         </div>
+
+                        <?php herz_post_meta( true ); ?>
                     </div>
                 </div>
 
