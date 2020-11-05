@@ -555,7 +555,11 @@ pre {
   font-weight: 700;
 }
 
-.breadcrumbs .breadcrumbs-col span:last-child {
+.breadcrumbs .breadcrumbs-col > span:first-child a {
+  color: #000000;
+}
+
+.breadcrumbs .breadcrumbs-col > span:last-child {
   color: #c42517;
 }
 
@@ -1408,7 +1412,10 @@ section.widget .post_widget_warp .post_widget__item .site-post-meta > span {
 }
 
 .site-blog .site-post-content {
-  padding-top: 72px;
+  padding: 50px;
+  overflow: hidden;
+  border-radius: 30px;
+  background-color: #ffffff;
 }
 
 .site-blog .site-post-content .row {
@@ -1422,6 +1429,14 @@ section.widget .post_widget_warp .post_widget__item .site-post-meta > span {
   padding-right: 8px;
 }
 
+.site-blog .site-post-content .breadcrumbs {
+  margin-bottom: 50px;
+}
+
+.site-blog .site-post-content .breadcrumbs .breadcrumbs-col {
+  padding: 0;
+}
+
 .site-blog .title-cate {
   font-size: 17px;
   font-weight: 400;
@@ -1431,7 +1446,7 @@ section.widget .post_widget_warp .post_widget__item .site-post-meta > span {
 }
 
 .site-post-item {
-  background-color: #fbf4ed;
+  background-color: #ffffff;
   overflow: hidden;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
@@ -1461,10 +1476,6 @@ section.widget .post_widget_warp .post_widget__item .site-post-meta > span {
   flex: 1 auto;
 }
 
-.site-post-item .site-post-image {
-  height: 184px;
-}
-
 .site-post-item .site-post-image img {
   height: 100%;
   object-fit: cover;
@@ -1489,6 +1500,55 @@ section.widget .post_widget_warp .post_widget__item .site-post-meta > span {
   -webkit-box-shadow: 0 0 11px rgba(59, 59, 59, 0.5);
   -moz-box-shadow: 0 0 11px rgba(59, 59, 59, 0.5);
   box-shadow: 0 0 11px rgba(59, 59, 59, 0.5);
+}
+
+.site-post-item.item-first {
+  position: relative;
+}
+
+.site-post-item.item-first .item-content {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  z-index: 1;
+}
+
+.site-post-item.item-first .site-post-image {
+  height: 100%;
+}
+
+.site-post-item.item-first .site-post-meta span {
+  color: #000000;
+}
+
+.site-post-item.item-first .site-post-title {
+  font-size: 35px;
+}
+
+.site-post-item.item-first .site-post-title a {
+  color: #000000;
+}
+
+.site-post-item.item-first .link-post {
+  font-size: 22px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.site-post-item.item-first .link-post i {
+  margin-left: 15px;
+  text-align: center;
+  color: #ffffff;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  border-radius: 50%;
+  background-color: #c42517;
+}
+
+.site-post-item.item-not-first .site-post-image {
+  height: 184px;
 }
 
 .site-post-title {
@@ -3700,6 +3760,9 @@ form.wpcf7-form .wpcf7-submit {
   }
   .modal.mode-quick-view-product .modal-dialog {
     max-width: 850px;
+  }
+  .site-blog .cate-image ~ .container .site-post-content {
+    margin-top: -130px;
   }
 }
 

@@ -139,6 +139,15 @@
       }
     }
   }
+  .site-blog {
+    .cate-image {
+      ~ .container {
+        .site-post-content {
+          margin-top: -130px;
+        }
+      }
+    }
+  }
 
 }
 
