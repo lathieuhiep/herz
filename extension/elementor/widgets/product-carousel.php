@@ -68,6 +68,16 @@ class herz_widget_product_carousel extends Widget_Base {
         );
 
         $repeater->add_control(
+            'description',
+            [
+                'label' => esc_html__( 'Description', 'herz' ),
+                'type' => Controls_Manager::TEXTAREA,
+                'default' => esc_html__( 'Description', 'herz' ),
+                'show_label' => true,
+            ]
+        );
+
+        $repeater->add_control(
             'list_link',
             [
                 'label' => esc_html__( 'Link', 'herz' ),
@@ -395,14 +405,7 @@ class herz_widget_product_carousel extends Widget_Base {
                             </h4>
                             <div class="item-desc d-flex align-items-center">
                                 <p>
-                                    <?php
-                                    if ( has_excerpt() ) :
-                                        echo esc_html( wp_trim_words( get_the_excerpt(), 50, '...' ) );
-                                    else:
-                                        echo esc_html( wp_trim_words( get_the_content(), 50, '...' ) );
-                                    endif;
-
-                                    ?>
+                                    <?php echo esc_html( $item['description'] ); ?>
                                 </p>
                             </div>
                         </div>

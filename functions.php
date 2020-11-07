@@ -414,9 +414,14 @@ function herz_comment_form() {
 /* End comment */
 
 /* Start get Category check box */
-function herz_check_get_cat( $type_taxonomy ) {
+function herz_check_get_cat( $type_taxonomy, $multi_select = true ) {
 
     $cat_check    =   array();
+
+    if ( !$multi_select ) {
+        $cat_check[0] = esc_html__('Hiển thị tất cả', 'herz');
+    }
+
     $category     =   get_terms(
         array(
             'taxonomy'      =>  $type_taxonomy,
