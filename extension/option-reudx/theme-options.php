@@ -337,23 +337,9 @@ Redux::setSection( $herz_opt_name, array(
     'fields'        =>  array(
 
         array(
-            'id'        =>  'herz_information_contact',
+            'id'        =>  'herz_link_store',
             'type'      =>  'text',
-            'title'     =>  esc_html__( 'Thông tin liên hệ (link)', 'herz' ),
-            'default'   =>  '#',
-        ),
-
-        array(
-            'id'        =>  'herz_information_recruitment',
-            'type'      =>  'text',
-            'title'     =>  esc_html__( 'Tuyển dụng (link)', 'herz' ),
-            'default'   =>  '#',
-        ),
-
-        array(
-            'id'        =>  'herz_information_faq',
-            'type'      =>  'text',
-            'title'     =>  esc_html__( 'FAQ', 'herz' ),
+            'title'     =>  esc_html__( 'Store (link)', 'herz' ),
             'default'   =>  '#',
         ),
 
@@ -470,13 +456,6 @@ Redux::setSection( $herz_opt_name, array(
     'customizer_width'  =>  '400px',
     'icon'              =>  'el el-globe-alt',
     'fields'            =>  array(
-
-        array(
-            'id'        =>  'herz_social_network_title',
-            'type'      =>  'text',
-            'title'     =>  esc_html__( 'Title', 'herz' ),
-            'default'   =>  'Follow Doppelherz tại...',
-        ),
 
         array(
             'id'        =>  'herz_social_network_facebook',
