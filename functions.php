@@ -80,6 +80,7 @@ if ( class_exists( 'RW_Meta_Box' ) ) {
      * Required: Meta Box Framework
      */
     require get_parent_theme_file_path( '/extension/meta-box/meta-box-options.php' );
+    require get_parent_theme_file_path( '/extension/meta-box/custom-link.php' );
 
 }
 
@@ -98,6 +99,10 @@ if ( did_action( 'elementor/loaded' ) ) :
     require get_parent_theme_file_path( '/extension/elementor/elementor.php' );
 
 endif;
+
+/* Require Post Type */
+
+require get_parent_theme_file_path( '/extension/post-type/custom-link.php' );
 
 /* Require Widgets */
 foreach(glob( get_parent_theme_file_path( '/extension/widgets/*.php' ) ) as $herz_file_widgets ) {

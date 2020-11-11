@@ -209,3 +209,23 @@ section {
     }
   }
 }
+.custom-link-widget-warp {
+  .item {
+    margin-bottom: 10px;
+    @include flexbox();
+    @include align-items(center);
+
+    .item-image {
+      width: 60px;
+      margin-right: 15px;
+      @include flex(0 0 auto);
+    }
+    .item-content {
+      @include flex(1);
+    }
+    .item-title {
+      margin: 0;
+      font-size: 13px;
+    }
+  }
+}

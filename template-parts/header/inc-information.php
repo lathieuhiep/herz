@@ -20,7 +20,7 @@ $herz_link_store = $herz_options['herz_link_store'];
                 </a>
 
                 <a class="icon cart" href="<?php echo esc_url( $herz_link_store ) ?>" title="store">
-                    <i class="fas fa-shopping-cart"></i>
+                    <img src="<?php echo esc_url( get_theme_file_uri( '/images/icon/icongiohang.png' ) ) ?>" alt="cart">
                 </a>
             </div>
         </div>
