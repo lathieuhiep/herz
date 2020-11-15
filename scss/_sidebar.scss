@@ -229,3 +229,11 @@ section {
     }
   }
 }
+.custom-html-widget {
+  .fb_dialog {
+    iframe {
+      right: -5px !important;
+      bottom: 80px !important;
+    }
+  }
+}

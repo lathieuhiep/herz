@@ -340,14 +340,11 @@ pre {
 }
 
 #back-top {
-  background-color: #ff5555;
   opacity: 0;
-  width: 40px;
-  height: 40px;
   bottom: 0;
   cursor: pointer;
   position: fixed;
-  right: 15px;
+  right: 22px;
   z-index: 1000;
   -webkit-transition: all 400ms ease-in-out;
   -moz-transition: all 400ms ease-in-out;
@@ -357,9 +354,8 @@ pre {
 
 #back-top a {
   display: block;
-  color: #ffffff;
-  line-height: 40px;
-  text-align: center;
+  font-size: 25px;
+  color: #c42517;
   text-decoration: none;
   -webkit-transition: all 0.25s ease-in-out;
   -moz-transition: all 0.25s ease-in-out;
@@ -370,10 +366,6 @@ pre {
 #back-top.active_top {
   opacity: 1;
   bottom: 15px;
-}
-
-#back-top:hover {
-  background-color: #c1272d;
 }
 
 /* Social network */
@@ -1529,6 +1521,11 @@ section.widget .post_widget_warp .post_widget__item .site-post-meta > span {
 .custom-link-widget-warp .item .item-title {
   margin: 0;
   font-size: 13px;
+}
+
+.custom-html-widget .fb_dialog iframe {
+  right: -5px !important;
+  bottom: 80px !important;
 }
 
 /**
@@ -3939,9 +3936,9 @@ form.wpcf7-form .wpcf7-submit {
 
 .zalo-chat {
   position: fixed;
-  bottom: 80px;
-  right: 15px;
-  width: 40px;
+  bottom: 165px;
+  right: 7px;
+  width: 60px;
 }
 
 /**
@@ -4048,25 +4045,30 @@ form.wpcf7-form .wpcf7-submit {
 }
 
 @media (max-width: 991px) {
+  .header-info-warp {
+    padding-left: 0;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
   .main-navigation .navbar-expand-lg .container {
     padding-left: 15px;
     padding-right: 15px;
   }
   .site-navigation_warp {
-    display: block;
-  }
-  .site-logo {
-    padding: 15px 0;
+    position: relative;
     display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
+    -webkit-align-items: center;
+    align-items: center;
     -webkit-justify-content: space-between;
     justify-content: space-between;
-    -webkit-flex: 1;
-    -ms-flex: 1;
-    flex: 1;
+  }
+  .site-logo {
+    padding: 15px 0;
   }
   .navbar-toggle {
     float: none;
@@ -4075,13 +4077,10 @@ form.wpcf7-form .wpcf7-submit {
     display: block;
   }
   .site-menu {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
     padding-left: 0;
-    background-color: #eeeeee;
-    z-index: 99;
+    -webkit-flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
   }
   .site-menu .collapse {
     display: none !important;
@@ -4143,6 +4142,16 @@ form.wpcf7-form .wpcf7-submit {
   .site-menu ul li .sub-menu li:hover a {
     color: #c42517;
   }
+  #mega-menu-wrap-primary {
+    position: static;
+  }
+  #mega-menu-wrap-primary .mega-menu-toggle.mega-menu-open + #mega-menu-primary {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+  }
   .icon_menu_item_mobile {
     display: block;
   }
@@ -4151,6 +4160,7 @@ form.wpcf7-form .wpcf7-submit {
   }
   .site-blog .site-post-content {
     padding-left: 0;
+    padding-right: 0;
   }
   .element-contact-cf7 {
     padding-left: 15px;
@@ -4219,23 +4229,6 @@ form.wpcf7-form .wpcf7-submit {
   .information {
     padding-top: 15px;
     padding-bottom: 15px;
-  }
-  .information > div {
-    -webkit-flex-wrap: wrap;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-  }
-  .information .text,
-  .information .information__social-network {
-    margin-right: 0;
-    -webkit-flex: 0 0 50%;
-    -ms-flex: 0 0 50%;
-    flex: 0 0 50%;
-    max-width: 50%;
-  }
-  .information .information__social-network {
-    -webkit-justify-content: flex-end;
-    justify-content: flex-end;
   }
   .information .information__contact {
     display: none;
@@ -4354,6 +4347,13 @@ form.wpcf7-form .wpcf7-submit {
 }
 
 @media (max-width: 480px) {
+  .information__social-network {
+    margin-bottom: 15px;
+    max-width: 100%;
+    -webkit-flex: 0 0 100%;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+  }
   .element-about-text .item .item-img img {
     width: 120px;
   }

@@ -19,13 +19,9 @@ $herz_nav_top_sticky   =   $herz_options['herz_nav_top_sticky'];
                             endif;
                         ?>
                     </a>
-
-                    <button class="navbar-toggler" data-toggle="collapse" data-target=".site-menu">
-                        <i class="fa fa-bars" aria-hidden="true"></i>
-                    </button>
                 </div>
 
-                <div class="site-menu collapse navbar-collapse">
+                <div class="site-menu">
                     <?php
 
                     if ( has_nav_menu('primary') ) :

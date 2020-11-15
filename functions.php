@@ -536,7 +536,7 @@ function herz_action_footer() {
     if ( !empty( $herz_zalo ) ) :
 ?>
         <a href="http://zalo.me/<?php echo esc_attr( $herz_zalo ); ?>" class="zalo-chat" target="_blank">
-            <img src="<?php echo esc_url( get_theme_file_uri( '/images/icon/zalo.svg' ) ) ?>" alt="zalo">
+            <img src="<?php echo esc_url( get_theme_file_uri( '/images/icon/logo-zalo.png' ) ) ?>" alt="zalo">
         </a>
 <?php
     endif;

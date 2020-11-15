@@ -255,31 +255,24 @@ pre {
   }
 }
 #back-top {
-  background-color: $background-hover;
   opacity: 0;
-  width: 40px;
-  height: 40px;
   bottom: 0;
   cursor: pointer;
   position: fixed;
-  right: 15px;
+  right: 22px;
   z-index: 1000;
   @include transition(all 400ms ease-in-out);
 
   a {
     display: block;
-    color: #ffffff;
-    line-height: 40px;
-    text-align: center;
+    font-size: 25px;
+    color: #c42517;
     text-decoration: none;
     @include transition(all 0.25s ease-in-out);
   }
   &.active_top {
     opacity: 1;
     bottom: 15px;
-  }
-  &:hover {
-    background-color: $background-primary;
   }
 }
 /* Social network */

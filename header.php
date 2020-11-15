@@ -39,7 +39,7 @@ get_template_part( 'template-parts/navigation/inc', 'nav-top' );
 
 <div id="back-top">
     <a href="#">
-        <i class="fa fa-chevron-up"></i>
+        <i class="fas fa-chevron-up"></i>
     </a>
 </div>
 

@@ -51,19 +51,28 @@ $herz_taxonomy = get_queried_object();
                             else:
                                 $herz_col = $herz_blog_per_row;
                             endif;
+
+                            if ( $i == 1 ) :
                             ?>
 
-                                <div id="post-<?php the_ID(); ?>" class="item-col d-flex flex-column col-12 col-sm-6 col-lg-<?php echo esc_attr( $herz_col ); ?>">
-                                    <?php
-                                    if ( $i == 1 ) :
-                                        get_template_part( 'template-parts/archive/content', 'archive-first' );
-                                    else:
-                                        get_template_part( 'template-parts/archive/content', 'archive-info' );
-                                    endif;
-                                    ?>
+                                <div id="post-<?php the_ID(); ?>" class="item-col d-flex flex-column col-12 col-sm-12 col-lg-<?php echo esc_attr( $herz_col ); ?>">
+                                    <?php get_template_part( 'template-parts/archive/content', 'archive-first' ); ?>
                                 </div>
 
-                            <?php $i++; endwhile; wp_reset_postdata(); ?>
+                            <?php else: ?>
+
+                            <div id="post-<?php the_ID(); ?>" class="item-col d-flex flex-column col-12 col-sm-6 col-lg-<?php echo esc_attr( $herz_col ); ?>">
+                                <?php get_template_part( 'template-parts/archive/content', 'archive-info' ); ?>
+
+                            </div>
+
+                            <?php
+
+                                endif;
+                                $i++;
+                                endwhile;
+                            wp_reset_postdata();
+                            ?>
                         </div>
 
                     <?php

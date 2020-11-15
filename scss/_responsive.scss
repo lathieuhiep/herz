@@ -152,7 +152,11 @@
 }
 
 @media ( max-width: 991px ) {
-  
+
+  .header-info-warp {
+    padding-left: 0;
+    @include flex-wrap(wrap);
+  }
   .main-navigation {
     .navbar-expand-lg {
       .container {
@@ -162,13 +166,13 @@
     }
   }
   .site-navigation_warp {
-    display: block;
+    position: relative;
+    @include flexbox();
+    @include align-items(center);
+    @include justify-content(space-between);
   }
   .site-logo {
     padding: 15px 0;
-    @include flexbox();
-    @include justify-content(space-between);
-    @include flex(1);
   }
   .navbar-toggle {
     float: none;
@@ -177,13 +181,8 @@
     display: block;
   }
   .site-menu {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
     padding-left: 0;
-    background-color: #eeeeee;
-    z-index: 99;
+    @include flex(0 0 auto);
 
     .collapse {
       display: none !important;
@@ -248,6 +247,19 @@
       }
     }
   }
+  #mega-menu-wrap-primary {
+    position: static;
+
+    .mega-menu-toggle.mega-menu-open {
+    + #mega-menu-primary {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      z-index: 9999;
+    }
+    }
+  }
   .icon_menu_item_mobile {
     display: block;
   }
@@ -259,6 +271,7 @@
   .site-blog {
     .site-post-content {
       padding-left: 0;
+      padding-right: 0;
     }
   }
   .element-contact-cf7 {
@@ -354,18 +367,6 @@
     padding-top: 15px;
     padding-bottom: 15px;
 
-    > div {
-      @include flex-wrap(wrap);
-    }
-    .text,
-    .information__social-network {
-      margin-right: 0;
-      @include flex(0 0 50%);
-      max-width: 50%;
-    }
-    .information__social-network {
-      @include justify-content(flex-end);
-    }
     .information__contact {
       display: none;
     }
@@ -532,6 +533,11 @@
 
 @media ( max-width: 480px ) {
 
+  .information__social-network {
+    margin-bottom: 15px;
+    max-width: 100%;
+    @include flex(0 0 100%);
+  }
   .element-about-text {
     .item {
       .item-img {
